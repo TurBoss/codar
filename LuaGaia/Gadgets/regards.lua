@@ -34,7 +34,7 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 	local unitName = UnitDefs[unitDefID].name
 	--Spring.Echo(unitName)
 	
-	if unitTeam == gaiaTeamID and unitID == 10600 then
+	if unitTeam == gaiaTeamID and unitID == 10600 and unitID == 10601 and unitID == 10602 and unitID == 10603 then 
 		Spring.AddTeamResource(attackerTeam, "m", 1000)
 	end
 	
@@ -44,14 +44,14 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 				if unitTeam ~= attackerTeam then
 					if attackerID ~= 10500 and attackerID ~= 10501 and attackerID ~= 10502 and attackerID ~= 10503 and attackerID ~= 10504 and attackerID ~= 10505 and attackerID ~= 10506 and attackerID ~= 10507 and attackerID ~= 10508 and attackerID ~= 10509  then
 						if unitName == "nm1" then
-							Spring.Echo("NM-1 Eliminado dando 260 de metal a equipo " .. attackerTeam)
-							Spring.AddTeamResource(attackerTeam, "m", 260)
+							Spring.Echo("NM-1 Eliminado dando 60 de metal a equipo " .. attackerTeam)
+							Spring.AddTeamResource(attackerTeam, "m", 60)
 						elseif unitName == "nk2" then
-							Spring.Echo("NK-2 Eliminado dando 600 de metal a equipo " .. attackerTeam)
-							Spring.AddTeamResource(attackerTeam, "m", 600)
+							Spring.Echo("NK-2 Eliminado dando 200 de metal a equipo " .. attackerTeam)
+							Spring.AddTeamResource(attackerTeam, "m", 200)
 						elseif unitName == "tkt3" then
-							Spring.Echo("TKT-3 Eliminado dando 2000 de metal a equipo " .. attackerTeam)
-							Spring.AddTeamResource(attackerTeam, "m", 2000)
+							Spring.Echo("TKT-3 Eliminado dando 700 de metal a equipo " .. attackerTeam)
+							Spring.AddTeamResource(attackerTeam, "m", 700)
 						end
 					end
 				end

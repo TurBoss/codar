@@ -62,6 +62,8 @@ function spawnNPC()
 	npc = {
 		{x=2575,name="nk2",z=3211,unitID=10600,rot="north",},
 		{x=1561,name="nk2",z=903,unitID=10601,rot="north",},
+		{x=3380,name="nk2",z=2030,unitID=10602,rot="north",},
+		{x=715,name="nk2",z=2030,unitID=10603,rot="north",},
 	}
 	for i=1, #npc do
 		Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
