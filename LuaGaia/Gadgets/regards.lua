@@ -35,7 +35,7 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 	--Spring.Echo(unitName)
 	
 	if unitTeam == gaiaTeamID and unitID == 10600 and unitID == 10601 and unitID == 10602 and unitID == 10603 then 
-		Spring.AddTeamResource(attackerTeam, "m", 1000)
+		Spring.AddTeamResource(attackerTeam, "m", 2500)
 	end
 	
 	if attackerTeam ~= nil then
