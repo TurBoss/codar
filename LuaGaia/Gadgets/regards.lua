@@ -34,7 +34,7 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 	local unitName = UnitDefs[unitDefID].name
 	--Spring.Echo(unitName)
 	
-	if unitTeam == gaiaTeamID and unitID == 10600 and unitID == 10601 and unitID == 10602 and unitID == 10603 then 
+	if unitTeam == gaiaTeamID and unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
 		Spring.AddTeamResource(attackerTeam, "m", 2500)
 	end
 	
