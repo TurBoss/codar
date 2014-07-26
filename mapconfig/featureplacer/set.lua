@@ -59,6 +59,8 @@ local features = {
 		{ name = 'prock_5'	,x = 2574	,z = 3540	,rot = "0" },
 		{ name = 'prock_6'	,x = 2551	,z = 3575	,rot = "0" },
 		
+		--Rocas Caminos
+		
 		{ name = 'prock_2'	,x = 1966	,z = 3950	,rot = "0" },
 		{ name = 'prock_7'	,x = 1966	,z = 3895	,rot = "0" },
 		{ name = 'prock_6'	,x = 1966	,z = 3847	,rot = "0" },
@@ -67,6 +69,13 @@ local features = {
 		{ name = 'prock_7'	,x = 2162	,z = 200	,rot = "0" },
 		{ name = 'prock_6'	,x = 2162	,z = 250	,rot = "0" },
 		
+		{ name = 'prock_2'	,x = 1040	,z = 2367	,rot = "0" },
+		{ name = 'prock_6'	,x = 990	,z = 2367	,rot = "0" },
+		{ name = 'prock_1'	,x = 940	,z = 2367	,rot = "0" },
+		
+		{ name = 'prock_6'	,x = 3080	,z = 1770	,rot = "0" },
+		{ name = 'prock_2'	,x = 3130	,z = 1770	,rot = "0" },
+		{ name = 'prock_1'	,x = 3186	,z = 1770	,rot = "0" },
 	},
 	metalspots = {
 	},
