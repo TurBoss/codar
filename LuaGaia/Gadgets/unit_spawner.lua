@@ -77,7 +77,7 @@ function spawnTurrets1()
 		{x=1400,name="torreta",z=3765,unitID=10502,rot="east",},
 		
 		--{x=245,name="torreta",z=1174,unitID=10503,rot="east",},
-		{x=2920,name="torreta",z=3823,unitID=10504,rot="east",},
+		{x=2946,name="torreta",z=3725,unitID=10504,rot="east",},
 	}
 	for i=1, #npc do
 		Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, 0, false, true, npc[i].unitID)
@@ -90,7 +90,7 @@ function spawnTurrets2()
 		{x=2730,name="torreta",z=330,unitID=10506,rot="west",},
 		{x=3712,name="torreta",z=1425,unitID=10507,rot="west",},
 		
-		{x=1174,name="torreta",z=245,unitID=10508,rot="west",},
+		{x=1152,name="torreta",z=371,unitID=10508,rot="west",},
 		--{x=3823,name="torreta",z=2900,unitID=10509,rot="west",},
 	}
 	for i=1, #npc do

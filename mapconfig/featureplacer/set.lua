@@ -37,19 +37,28 @@ local features = {
 		{ name = 'ad0_pine_1_xl',x = 2442	,z = 3418	,rot = "0" },
 		{ name = 'ad0_pine_1_l'	,x = 2447	,z = 3335	,rot = "0" },
 		
-		--[[{ name = 'slrock1'	,x = 2000	,z = 2500	,rot = "0" },
-		{ name = 'slrock2'	,x = 2000	,z = 2700	,rot = "0" },
-		{ name = 'slrock3'	,x = 2000	,z = 2900	,rot = "0" },
-		{ name = 'slrock4'	,x = 2000	,z = 3100	,rot = "0" },
-		{ name = 'slrockl1'	,x = 2000	,z = 3300	,rot = "0" },
+		--[[{ name = 'prock_1'	,x = 2000	,z = 2100	,rot = "0" },
+		{ name = 'prock_2'	,x = 2000	,z = 2200	,rot = "0" },
+		{ name = 'prock_3'	,x = 2000	,z = 2300	,rot = "0" },
+		{ name = 'prock_4'	,x = 2000	,z = 2400	,rot = "0" },
+		{ name = 'prock_5'	,x = 2000	,z = 2500	,rot = "0" },
+		{ name = 'prock_6'	,x = 2000	,z = 2600	,rot = "0" },
+		{ name = 'prock_7'	,x = 2000	,z = 2700	,rot = "0" },--]]
 		
-		{ name = 'ad0_pine_1_l'	,x = 1200	,z = 1420	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1150	,z = 1422	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1050	,z = 1410	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1300	,z = 1470	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1295	,z = 1400	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1350	,z = 1420	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1390	,z = 1490	,rot = "0" },--]]
+		--Rocas Jungla
+		
+		{ name = 'prock_1'	,x = 1504	,z = 547	,rot = "0" },
+		{ name = 'prock_4'	,x = 1610	,z = 560	,rot = "0" },
+		{ name = 'prock_7'	,x = 1543	,z = 526	,rot = "0" },
+		{ name = 'prock_5'	,x = 1580	,z = 540	,rot = "0" },
+		{ name = 'prock_6'	,x = 1555	,z = 560	,rot = "0" },
+		
+		{ name = 'prock_1'	,x = 2612	,z = 3537	,rot = "0" },
+		{ name = 'prock_4'	,x = 2530	,z = 3536	,rot = "0" },
+		{ name = 'prock_7'	,x = 2597	,z = 3565	,rot = "0" },
+		{ name = 'prock_5'	,x = 2574	,z = 3540	,rot = "0" },
+		{ name = 'prock_6'	,x = 2551	,z = 3575	,rot = "0" },
+		
 	},
 	metalspots = {
 	},
