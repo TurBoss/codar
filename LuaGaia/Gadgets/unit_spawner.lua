@@ -14,8 +14,16 @@ local gaiaTeamID = Spring.GetGaiaTeamID()
 
 local spawnTime = 0
 local npcDeadTime = 0
-local timeToNPC = 0
-local isTime = 0
+
+local timeToNPC1 = 0
+local timeToNPC2 = 0
+local timeToNPC3 = 0
+local timeToNPC4 = 0
+
+local timer1 = 0
+local timer2 = 0
+local timer3 = 0
+local timer4 = 0
 -- synced only
 
 if (not gadgetHandler:IsSyncedCode()) then
@@ -37,28 +45,32 @@ function gadget:GameStart()
 end
 
 function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
-	if unitID == 10600 then
-		spawnTime = 5000
+	if unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then
+		spawnTime = 9000
 	end
 end
 
 function gadget:GameFrame(n)
+	--Spring.Echo(n)
 	if spawnTime > 0 then
 		--Spring.Echo("Start Timer")
 		npcDeadTime = n
-		timeToNPC = spawnTime
+		timeToNPC1 = spawnTime
 		spawnTime = 0
+		timer1 = 1
 	end
 	
-	if n - npcDeadTime >= timeToNPC then
+	if n - npcDeadTime >= timeToNPC1 and timer1 == 1 then
 		spawnNPC()
 		timeToNPC = 0
+		timer1 = 0
 	end
 end
 
 --spawn npcs
 
 function spawnNPC()
+	Spring.Echo("Spawns Npc")
 	npc = {
 		{x=2575,name="destructor",z=3211,unitID=10600,rot="south",},
 		{x=1561,name="destructor",z=903,unitID=10601,rot="north",},
@@ -71,6 +83,7 @@ function spawnNPC()
 end
 
 function spawnTurrets1()
+	Spring.Echo("Spawns Turrents")
 	npc = {
 		{x=1090,name="torreta",z=3000,unitID=10500,rot="east",},
 		{x=450,name="torreta",z=2660,unitID=10501,rot="east",},
@@ -85,6 +98,7 @@ function spawnTurrets1()
 end
 
 function spawnTurrets2()
+	Spring.Echo("Spawns Npc")
 	npc = {
 		{x=3000,name="torreta",z=1090,unitID=10505,rot="west",},
 		{x=2730,name="torreta",z=330,unitID=10506,rot="west",},
