@@ -1,5 +1,5 @@
 model = {
-   radius = 20,
+   radius = 40,
    --height = 100,
    midpos = {0,20,0}, -- model center offset
    tex1 = "prock.jpg", -- same as S3O texture 1
