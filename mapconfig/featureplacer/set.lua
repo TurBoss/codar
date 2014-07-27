@@ -76,6 +76,27 @@ local features = {
 		{ name = 'prock_6'	,x = 3080	,z = 1770	,rot = "0" },
 		{ name = 'prock_2'	,x = 3130	,z = 1770	,rot = "0" },
 		{ name = 'prock_1'	,x = 3186	,z = 1770	,rot = "0" },
+		
+		--Metal top
+		
+		{ name = 'mineral1'	,x = 1950	,z = 710	,rot = "8000" },
+		{ name = 'mineral2'	,x = 2015	,z = 725	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 2080	,z = 760	,rot = "32589" },
+		{ name = 'mineral1'	,x = 2120	,z = 720	,rot = "45" },
+		
+		{ name = 'mineral1'	,x = 1674	,z = 895	,rot = "32589" },
+		{ name = 'mineral1'	,x = 1406	,z = 772	,rot = "45" },
+		
+		--Metal bot
+		
+		{ name = 'mineral1'	,x = 1990	,z = 3390	,rot = "8000" },
+		{ name = 'mineral1'	,x = 2045	,z = 3380	,rot = "-16382" },
+		{ name = 'mineral2'	,x = 2112	,z = 3385	,rot = "32589" },
+		{ name = 'mineral1'	,x = 2180	,z = 3380	,rot = "45" },
+		
+		{ name = 'mineral1'	,x = 2470	,z = 3200	,rot = "32589" },
+		{ name = 'mineral1'	,x = 2712	,z = 3277	,rot = "45" },
+		
 	},
 	metalspots = {
 	},
