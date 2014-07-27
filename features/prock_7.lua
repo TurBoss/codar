@@ -13,7 +13,7 @@ local featureDef	=	{
 	hitdensity			= "5",
 	energy				=0,
 
-	damage				=5000,
+	damage				=2000,
 	flammable			=true,
 	reclaimable			=false,
 	autoreclaimable		=flase,
