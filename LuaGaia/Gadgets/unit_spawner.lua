@@ -54,10 +54,10 @@ function gadget:Initialize ()
 		gadgetHandler:RemoveGadget()
 		return
 	end
-	timer1 = NpcTimer.create(1, 200)
-	timer2 = NpcTimer.create(2, 200)
-	timer3 = NpcTimer.create(3, 200)
-	timer4 = NpcTimer.create(4, 200)
+	timer1 = NpcTimer.create(1, 9000)
+	timer2 = NpcTimer.create(2, 9000)
+	timer3 = NpcTimer.create(3, 9000)
+	timer4 = NpcTimer.create(4, 9000)
 end
 
 function gadget:GameStart()
