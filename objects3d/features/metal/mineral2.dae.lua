@@ -1,6 +1,6 @@
 model = {
    
-   radius = 30.0,
+   radius = 50.0,
    --height = 40,
    midpos = {0,30,0}, -- model center offset
    tex1 = "mineral11.png", -- same as S3O texture 1
