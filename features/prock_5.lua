@@ -11,12 +11,12 @@ local featureDef	=	{
 	blocking			=true,
 	upright				=true,
 	hitdensity			= "5",
-	energy				=0,
+	metal				=50,
 
 	damage				=1000,
 	flammable			=true,
-	reclaimable			=false,
-	autoreclaimable		=flase,
+	reclaimable			=true,
+	autoreclaimable		=false,
 	customparams = { 
 		randomrotate		= "true", 
 	}, 
