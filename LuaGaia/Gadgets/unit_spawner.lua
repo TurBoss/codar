@@ -23,7 +23,8 @@ end
 
 function NpcTimer.create(npc, timeToNpc)
 	local tim = {}             -- our new object
-	setmetatable(tim,NpcTimer)  -- make Account handle lookup
+	setmetatable(tim,NpcTimer)  -- make NpcTimer handle lookup
+	
 	tim.npc = npc      -- initialize our object
 	tim.enabled = 0
 	tim.spawnTime = timeToNpc
@@ -71,14 +72,11 @@ end
 function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
 	if unitID == 10600 then
 		timer1:set_timer(1)
-	end
-	if unitID == 10601 then
+	elseif unitID == 10601 then
 		timer2:set_timer(1)
-	end
-	if unitID == 10602 then
+	elseif unitID == 10602 then
 		timer3:set_timer(1)
-	end
-	if unitID == 10603 then
+	elseif unitID == 10603 then
 		timer4:set_timer(1)
 	end
 end
