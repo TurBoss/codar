@@ -29,7 +29,7 @@ else
 		local unitID = SYNCED.soundEffectsArgs
 		--Spring.Echo ( unitID)
 		if unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
-			Spring.PlaySoundFile("sounds/wsight.wav")
+			Spring.PlaySoundFile("sounds/wsight.ogg")
 		end
 	end
 
