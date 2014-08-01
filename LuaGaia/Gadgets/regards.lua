@@ -46,15 +46,18 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 						if unitName == "nm1" then
 							Spring.Echo("NM-1 Eliminado dando 40 de metal a equipo " .. attackerTeam)
 							Spring.AddTeamResource(attackerTeam, "m", 40)
-						elseif unitName == "nk2" then
-							Spring.Echo("NK-2 Eliminado dando 115 de metal a equipo " .. attackerTeam)
-							Spring.AddTeamResource(attackerTeam, "m", 115)
-						elseif unitName == "tkt3" then
-							Spring.Echo("TKT-3 Eliminado dando 500 de metal a equipo " .. attackerTeam)
+						elseif unitName == "rk2" then
+							Spring.Echo("RK-2 Eliminado dando 65 de metal a equipo " .. attackerTeam)
+							Spring.AddTeamResource(attackerTeam, "m", 65)
+						elseif unitName == "nk3" then
+							Spring.Echo("NK-3 Eliminado dando 160 de metal a equipo " .. attackerTeam)
+							Spring.AddTeamResource(attackerTeam, "m", 160)
+						elseif unitName == "tkt4" then
+							Spring.Echo("TKT-4 Eliminado dando 500 de metal a equipo " .. attackerTeam)
 							Spring.AddTeamResource(attackerTeam, "m", 500)
-						elseif unitName == "lz4" then
-							Spring.Echo("LZ-4 Eliminado dando 1000 de metal a equipo " .. attackerTeam)
-							Spring.AddTeamResource(attackerTeam, "m", 1000)
+						elseif unitName == "lz5" then
+							Spring.Echo("LZ-5 Eliminado dando 750 de metal a equipo " .. attackerTeam)
+							Spring.AddTeamResource(attackerTeam, "m", 750)
 						elseif unitName == "rc" then
 							Spring.Echo("RC Eliminado dando 150 de metal a equipo " .. attackerTeam)
 							Spring.AddTeamResource(attackerTeam, "m", 150)
@@ -62,8 +65,8 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 							Spring.Echo("IT-0 Eliminado dando 75 de metal a equipo " .. attackerTeam)
 							Spring.AddTeamResource(attackerTeam, "m", 75)
 						elseif unitName == "torreoa" then
-							Spring.Echo("Torre Eliminada dando 1000 de metal a equipo " .. attackerTeam)
-							Spring.AddTeamResource(attackerTeam, "m", 1000)
+							Spring.Echo("Torre Eliminada dando 1200 de metal a equipo " .. attackerTeam)
+							Spring.AddTeamResource(attackerTeam, "m", 1200)
 						end
 					end
 				end
