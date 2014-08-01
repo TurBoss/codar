@@ -64,9 +64,9 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 						elseif unitName == "it0" then
 							Spring.Echo("IT-0 Eliminado dando 75 de metal a equipo " .. attackerTeam)
 							Spring.AddTeamResource(attackerTeam, "m", 75)
-						elseif unitName == "torreoa" then
-							Spring.Echo("Torre Eliminada dando 1200 de metal a equipo " .. attackerTeam)
-							Spring.AddTeamResource(attackerTeam, "m", 1200)
+						elseif unitName == "torreta" then
+							Spring.Echo("Torre Eliminada dando 1000 de metal a equipo " .. attackerTeam)
+							Spring.AddTeamResource(attackerTeam, "m", 1000)
 						end
 					end
 				end
