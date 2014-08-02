@@ -93,9 +93,13 @@ local features = {
 		{ name = 'mineral2'	,x = 3452	,z = 1212	,rot = "32589" },
 		{ name = 'mineral1'	,x = 3542	,z = 1174	,rot = "45" },
 		
-		{ name = 'mineral1'	,x = 2435	,z = 1620	,rot = "45" },
+		{ name = 'mineral1'	,x = 2435	,z = 1620	,rot = "32589" },
 		{ name = 'mineral2'	,x = 3915	,z = 177	,rot = "45" },
 		{ name = 'mineral1'	,x = 3844	,z = 177	,rot = "45" },
+		
+		{ name = 'mineral1'	,x = 141	,z = 143	,rot = "32589" },
+		{ name = 'mineral2'	,x = 142	,z = 191	,rot = "45" },
+		{ name = 'mineral1'	,x = 196	,z = 146	,rot = "45" },
 		
 		--Metal bot
 		
@@ -114,9 +118,13 @@ local features = {
 		{ name = 'mineral1'	,x = 553	,z = 2908	,rot = "45" },
 		
 		
-		{ name = 'mineral1'	,x = 1688	,z = 2479	,rot = "45" },
+		{ name = 'mineral1'	,x = 1688	,z = 2479	,rot = "32589" },
 		{ name = 'mineral2'	,x = 177	,z = 3890	,rot = "45" },
 		{ name = 'mineral1'	,x = 266	,z = 3906	,rot = "45" },
+		
+		{ name = 'mineral1'	,x = 3938	,z = 3929	,rot = "32589" },
+		{ name = 'mineral2'	,x = 3936	,z = 3858	,rot = "45" },
+		{ name = 'mineral1'	,x = 3860	,z = 3931	,rot = "45" },
 	},
 	metalspots = {
 	},
