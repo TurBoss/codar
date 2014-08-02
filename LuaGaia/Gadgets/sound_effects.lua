@@ -13,8 +13,7 @@ end
 if (gadgetHandler:IsSyncedCode()) then
 	
 	function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
-		
-		_G.soundEffectsArgs = unitID
+		_G.soundEffectsArgs = {unitID, attackerTeam}
 		SendToUnsynced("Muerte")
 		_G.soundEffectsArgs = nil
 	end
@@ -26,10 +25,15 @@ else
 	end
 	
 	function soundEffects()
-		local unitID = SYNCED.soundEffectsArgs
-		--Spring.Echo ( unitID)
+		local unitID = SYNCED.soundEffectsArgs[1]
+		local attackerTeam = SYNCED.soundEffectsArgs[2]
+		Spring.Echo ( unitID)
+		Spring.Echo ( attackerTeam)
+		
+
+		Spring.Echo ( Spring.GetMyAllyTeamID() )
 		if unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
-			Spring.PlaySoundFile("sounds/wsight.ogg")
+			--Spring.PlaySoundFile("sounds/wsight.ogg")
 		end
 	end
 
