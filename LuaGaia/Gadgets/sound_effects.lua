@@ -27,13 +27,13 @@ else
 	function soundEffects()
 		local unitID = SYNCED.soundEffectsArgs[1]
 		local attackerTeam = SYNCED.soundEffectsArgs[2]
-		Spring.Echo ( unitID)
-		Spring.Echo ( attackerTeam)
+		Spring.Echo(attackerTeam)
+		Spring.Echo(Spring.GetMyTeamID())
 		
-
-		Spring.Echo ( Spring.GetMyAllyTeamID() )
-		if unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
-			--Spring.PlaySoundFile("sounds/wsight.ogg")
+		if attackerTeam == Spring.GetMyTeamID() then
+			if unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
+				Spring.PlaySoundFile("sounds/wsight.ogg")
+			end
 		end
 	end
 
