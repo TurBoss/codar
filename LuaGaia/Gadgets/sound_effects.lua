@@ -27,8 +27,6 @@ else
 	function soundEffects()
 		local unitID = SYNCED.soundEffectsArgs[1]
 		local attackerTeam = SYNCED.soundEffectsArgs[2]
-		Spring.Echo(attackerTeam)
-		Spring.Echo(Spring.GetMyTeamID())
 		
 		if attackerTeam == Spring.GetMyTeamID() then
 			if unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
