@@ -58,9 +58,11 @@ function gadget:Initialize ()
 	timer2 = NpcTimer.create(2, 9000)
 	timer3 = NpcTimer.create(3, 9000)
 	timer4 = NpcTimer.create(4, 9000)
+	timer5 = NpcTimer.create(5, 9000)
 end
 
 function gadget:GameStart()
+	--timer5:set_timer(1)
 	spawnNPC(1)
 	spawnNPC(2)
 	spawnNPC(3)
@@ -78,6 +80,8 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerD
 		timer3:set_timer(1)
 	elseif unitID == 10603 then
 		timer4:set_timer(1)
+	elseif unitID == 10604 then
+		timer5:set_timer(1)
 	end
 end
 
@@ -86,6 +90,7 @@ function gadget:GameFrame(n)
 	timer2:update(n)
 	timer3:update(n)
 	timer4:update(n)
+	timer5:update(n)
 end
 
 --spawn npcs
@@ -97,6 +102,7 @@ function spawnNPC(i)
 		{x=1561,name="destructor",z=903,unitID=10601,rot="north",},
 		{x=3380,name="destructor",z=2030,unitID=10602,rot="west",},
 		{x=715,name="destructor",z=2030,unitID=10603,rot="east",},
+		{x=2070,name="torreta",z=2040,unitID=10604,rot="south",},
 	}
 	Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
 	--[[for i=1, #npc do
