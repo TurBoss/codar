@@ -85,10 +85,10 @@ local features = {
 		{ name = 'mineral1'	,x = 2120	,z = 720	,rot = "45" },
 		
 		{ name = 'mineral1'	,x = 1674	,z = 895	,rot = "32589" },
-		{ name = 'mineral1'	,x = 1406	,z = 772	,rot = "45" },
+		{ name = 'mineral2'	,x = 1406	,z = 772	,rot = "45" },
 		
 		{ name = 'mineral1'	,x = 3392	,z = 1917	,rot = "32589" },
-		{ name = 'mineral1'	,x = 3354	,z = 2140	,rot = "45" },
+		{ name = 'mineral2'	,x = 3354	,z = 2140	,rot = "45" },
 		
 		{ name = 'mineral2'	,x = 3452	,z = 1212	,rot = "32589" },
 		{ name = 'mineral1'	,x = 3542	,z = 1174	,rot = "45" },
@@ -101,6 +101,10 @@ local features = {
 		{ name = 'mineral2'	,x = 142	,z = 191	,rot = "45" },
 		{ name = 'mineral1'	,x = 196	,z = 146	,rot = "45" },
 		
+		{ name = 'mineral2'	,x = 1478	,z = 1700	,rot = "32589" },
+		{ name = 'mineral1'	,x = 1462	,z = 1800	,rot = "45" },
+		{ name = 'mineral2'	,x = 2905	,z = 655	,rot = "45" },
+		
 		--Metal bot
 		
 		{ name = 'mineral1'	,x = 1990	,z = 3390	,rot = "8000" },
@@ -109,10 +113,10 @@ local features = {
 		{ name = 'mineral1'	,x = 2180	,z = 3380	,rot = "45" },
 		
 		{ name = 'mineral1'	,x = 2470	,z = 3200	,rot = "32589" },
-		{ name = 'mineral1'	,x = 2712	,z = 3277	,rot = "45" },
+		{ name = 'mineral2'	,x = 2712	,z = 3277	,rot = "45" },
 		
 		{ name = 'mineral1'	,x = 707	,z = 2155	,rot = "32589" },
-		{ name = 'mineral1'	,x = 715	,z = 1927	,rot = "45" },
+		{ name = 'mineral2'	,x = 715	,z = 1927	,rot = "45" },
 		
 		{ name = 'mineral2'	,x = 646	,z = 2895	,rot = "32589" },
 		{ name = 'mineral1'	,x = 553	,z = 2908	,rot = "45" },
@@ -125,6 +129,10 @@ local features = {
 		{ name = 'mineral1'	,x = 3938	,z = 3929	,rot = "32589" },
 		{ name = 'mineral2'	,x = 3936	,z = 3858	,rot = "45" },
 		{ name = 'mineral1'	,x = 3860	,z = 3931	,rot = "45" },
+		
+		{ name = 'mineral2'	,x = 2627	,z = 2388	,rot = "32589" },
+		{ name = 'mineral1'	,x = 2641	,z = 2304	,rot = "45" },
+		{ name = 'mineral2'	,x = 1148	,z = 3445	,rot = "45" },
 	},
 	metalspots = {
 	},
