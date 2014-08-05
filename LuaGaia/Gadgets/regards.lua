@@ -34,14 +34,7 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 	local unitName = UnitDefs[unitDefID].name
 	--Spring.Echo(unitName)
 	--Spring.Echo(Spring.GetPlayerInfo(0))
-	
-	if attackerTeam ~= nil then
-		local name,_,_,_,_,_,_,_,_ = Spring.GetPlayerInfo(attackerTeam)
-	end
-	
-	if name == nil then name = "Bot" end
-	
-	--Spring.Echo(name)
+	local name = nil
 	
 	if unitTeam == gaiaTeamID and unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
 		Spring.AddTeamResource(attackerTeam, "m", 550)
@@ -52,6 +45,12 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 			if unitTeam ~= gaiaTeamID then
 				if unitTeam ~= attackerTeam then
 					if attackerID ~= 10500 and attackerID ~= 10501 and attackerID ~= 10502 and attackerID ~= 10503 and attackerID ~= 10504 and attackerID ~= 10505 and attackerID ~= 10506 and attackerID ~= 10507 and attackerID ~= 10508 and attackerID ~= 10509 then
+						
+						local name,_,_,_,_,_,_,_,_ = Spring.GetPlayerInfo(attackerTeam)
+						if name == nil then
+							name = "Bot"
+						end
+						
 						if unitName == "nm1" then
 							Spring.Echo("NM-1 Eliminado dando 40 de metal a " .. name)
 							Spring.AddTeamResource(attackerTeam, "m", 40)
