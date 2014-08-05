@@ -35,7 +35,9 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 	--Spring.Echo(unitName)
 	--Spring.Echo(Spring.GetPlayerInfo(0))
 	
-	local name,_,_,_,_,_,_,_,_ = Spring.GetPlayerInfo(attackerTeam)
+	if attackerTeam ~= nil then
+		local name,_,_,_,_,_,_,_,_ = Spring.GetPlayerInfo(attackerTeam)
+	end
 	
 	if name == nil then name = "Bot" end
 	
@@ -68,7 +70,7 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 						elseif unitName == "dt6" then
 							Spring.Echo("DT-6 Eliminado dando 800 de metal a " .. name)
 							Spring.AddTeamResource(attackerTeam, "m", 800)
-						elseif unitName == "torreta" then
+						elseif unitName == "rc" then
 							Spring.Echo("RC Eliminado dando 150 de metal a " .. name)
 							Spring.AddTeamResource(attackerTeam, "m", 150)
 						elseif unitName == "it0" then
