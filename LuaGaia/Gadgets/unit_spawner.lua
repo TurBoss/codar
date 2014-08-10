@@ -69,6 +69,7 @@ function gadget:GameStart()
 	spawnNPC(4)
 	spawnTurrets1()
 	spawnTurrets2()
+	unselectableTurrents()
 end
 
 function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
@@ -138,4 +139,17 @@ function spawnTurrets2()
 	for i=1, #npc do
 		Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, 1, false, true, npc[i].unitID)
 	end
+end
+
+function unselectableTurrents()
+	Spring.SetUnitNoSelect(10500, true)
+	Spring.SetUnitNoSelect(10501, true)
+	Spring.SetUnitNoSelect(10502, true)
+	Spring.SetUnitNoSelect(10503, true)
+	Spring.SetUnitNoSelect(10504, true)
+	Spring.SetUnitNoSelect(10505, true)
+	Spring.SetUnitNoSelect(10506, true)
+	Spring.SetUnitNoSelect(10507, true)
+	Spring.SetUnitNoSelect(10508, true)
+	Spring.SetUnitNoSelect(10509, true)
 end
