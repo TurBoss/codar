@@ -2,7 +2,7 @@ model = {
    
    radius = 30.0,
    --height = 40,
-   midpos = {0,30,0}, -- model center offset
+   midpos = {0,20,0}, -- model center offset
    tex1 = "mineral11.png", -- same as S3O texture 1
    tex2 = "mineral12.png", -- same as S3O texture 2
    --[[invertteamcolor = true, -- invert tex1 alpha channel

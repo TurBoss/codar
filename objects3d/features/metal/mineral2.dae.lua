@@ -2,9 +2,9 @@ model = {
    
    radius = 50.0,
    --height = 40,
-   midpos = {0,30,0}, -- model center offset
-   tex1 = "mineral11.png", -- same as S3O texture 1
-   tex2 = "mineral12.png", -- same as S3O texture 2
+   midpos = {0,20,0}, -- model center offset
+   tex1 = "mineral21.png", -- same as S3O texture 1
+   tex2 = "mineral22.png", -- same as S3O texture 2
    --[[invertteamcolor = true, -- invert tex1 alpha channel
    fliptextures = true, -- turn textures upside down
    pieces = {
