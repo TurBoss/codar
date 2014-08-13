@@ -43,7 +43,12 @@ function SpawnTimer:update(gameFrame)
 	local gameFrame = gameFrame
 
 	if gameFrame - self.startTime >= self.spawnTime and self.enabled == 1 then
-		self.enabled = 0
+		if gameFrame - self.npcDeadTime >= self.spawnTime and self.enabled == 1 then
+			processFeature(self.npc)
+			self.enabled = 0
+		end
+	else
+			self.enabled = 0
 		return true
 	else
 		return false
