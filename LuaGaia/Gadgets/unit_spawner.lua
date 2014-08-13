@@ -56,11 +56,11 @@ function gadget:Initialize ()
 		gadgetHandler:RemoveGadget()
 		return
 	end
-	timer1 = SpawnTimer.create(500)
-	timer2 = SpawnTimer.create(9000)
-	timer3 = SpawnTimer.create(9000)
-	timer4 = SpawnTimer.create(9000)
-	timer5 = SpawnTimer.create(500)
+	timer1 = SpawnTimer.create(9000) -- Destructor 1
+	timer2 = SpawnTimer.create(9000) -- Destructor 2
+	timer3 = SpawnTimer.create(9000) -- Destructor 3
+	timer4 = SpawnTimer.create(9000) -- Destructor 4
+	timer5 = SpawnTimer.create(500) -- Cofre 1
 end
 
 function gadget:GameStart()
