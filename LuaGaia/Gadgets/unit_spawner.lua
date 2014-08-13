@@ -43,12 +43,7 @@ function SpawnTimer:update(gameFrame)
 	local gameFrame = gameFrame
 
 	if gameFrame - self.startTime >= self.spawnTime and self.enabled == 1 then
-		if gameFrame - self.npcDeadTime >= self.spawnTime and self.enabled == 1 then
-			processFeature(self.npc)
-			self.enabled = 0
-		end
-	else
-			self.enabled = 0
+		self.enabled = 0
 		return true
 	else
 		return false
@@ -106,7 +101,7 @@ end
 function spawnFeature(i)
 	Spring.Echo("torreloca")
 	feature = {
-		{name="mineral1",x=2070,z=2040,unitID=10604,rot="south",},
+		{name="cofre1",x=2070,z=2040,unitID=10604,rot="south",},
 	}
 	
 		local yPlacement	= Spring.GetGroundHeight(feature[i].x,feature[i].z)+5
