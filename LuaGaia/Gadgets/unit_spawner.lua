@@ -10,8 +10,8 @@ function gadget:GetInfo()
   }
 end
 
-NpcTimer = {}
-NpcTimer.__index = NpcTimer
+SpawnTimer = {}
+SpawnTimer.__index = SpawnTimer
 
 local gaiaTeamID = Spring.GetGaiaTeamID()
 
@@ -21,30 +21,32 @@ if (not gadgetHandler:IsSyncedCode()) then
 	return false
 end
 
-function NpcTimer.create(npc, timeToNpc)
+function SpawnTimer.create(timeToSpawn)
 	local tim = {}             -- our new object
-	setmetatable(tim,NpcTimer)  -- make NpcTimer handle lookup
+	setmetatable(tim,SpawnTimer)  -- make NpcTimer handle lookup
 	
-	tim.npc = npc      -- initialize our object
+	--tim.npc = npc      -- initialize our object
 	tim.enabled = 0
-	tim.spawnTime = timeToNpc
-	tim.npcDeadTime = 0
+	tim.spawnTime = timeToSpawn
+	tim.startTime = 0
 	return tim
 end
 
-function NpcTimer:set_timer(enable)
+function SpawnTimer:set_timer()
 	--Spring.Echo("Timer " .. self.npc)
-	self.npcDeadTime, _ = Spring.GetGameFrame() 
-	self.enabled = enable
+	self.startTime, _ = Spring.GetGameFrame() 
+	self.enabled = 1
 end
 
-function NpcTimer:update(gameFrame)
+function SpawnTimer:update(gameFrame)
 
 	local gameFrame = gameFrame
 
-	if gameFrame - self.npcDeadTime >= self.spawnTime and self.enabled == 1 then
-		spawnNPC(self.npc)
+	if gameFrame - self.startTime >= self.spawnTime and self.enabled == 1 then
 		self.enabled = 0
+		return true
+	else
+		return false
 	end
 end
 
@@ -54,45 +56,59 @@ function gadget:Initialize ()
 		gadgetHandler:RemoveGadget()
 		return
 	end
-	timer1 = NpcTimer.create(1, 9000)
-	timer2 = NpcTimer.create(2, 9000)
-	timer3 = NpcTimer.create(3, 9000)
-	timer4 = NpcTimer.create(4, 9000)
-	timer5 = NpcTimer.create(5, 9000)
+	timer1 = SpawnTimer.create(500)
+	timer2 = SpawnTimer.create(9000)
+	timer3 = SpawnTimer.create(9000)
+	timer4 = SpawnTimer.create(9000)
+	timer5 = SpawnTimer.create(500)
 end
 
 function gadget:GameStart()
-	--timer5:set_timer(1)
+	timer5:set_timer()
 	spawnNPC(1)
 	spawnNPC(2)
 	spawnNPC(3)
 	spawnNPC(4)
 	spawnTurrets1()
 	spawnTurrets2()
-	unselectableTurrents()
+	--unselectableTurrents()
 end
 
 function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
 	if unitID == 10600 then
-		timer1:set_timer(1)
+		timer1:set_timer()
 	elseif unitID == 10601 then
-		timer2:set_timer(1)
+		timer2:set_timer()
 	elseif unitID == 10602 then
-		timer3:set_timer(1)
+		timer3:set_timer()
 	elseif unitID == 10603 then
-		timer4:set_timer(1)
+		timer4:set_timer()
 	elseif unitID == 10604 then
-		timer5:set_timer(1)
+		timer5:set_timer()
 	end
 end
 
 function gadget:GameFrame(n)
-	timer1:update(n)
-	timer2:update(n)
-	timer3:update(n)
-	timer4:update(n)
-	timer5:update(n)
+	if timer1:update(n) then spawnNPC(1) end
+	if timer2:update(n) then spawnNPC(2) end
+	if timer3:update(n) then spawnNPC(3) end
+	if timer4:update(n) then spawnNPC(4) end
+	if timer5:update(n) then spawnFeature(1) end
 end
+
+--spawn features
+
+function spawnFeature(i)
+	Spring.Echo("torreloca")
+	feature = {
+		{name="mineral1",x=2070,z=2040,unitID=10604,rot="south",},
+	}
+	
+		local yPlacement	= Spring.GetGroundHeight(feature[i].x,feature[i].z)+5
+		local mineralID = Spring.CreateFeature(feature[i].name, feature[i].x, yPlacement, feature[i].z, feature[i].rot)
+		Spring.Echo(mineralID)
+end
+
 
 --spawn npcs
 
@@ -103,7 +119,6 @@ function spawnNPC(i)
 		{x=1561,name="destructor",z=903,unitID=10601,rot="north",},
 		{x=3380,name="destructor",z=2030,unitID=10602,rot="west",},
 		{x=715,name="destructor",z=2030,unitID=10603,rot="east",},
-		{x=2070,name="torreta",z=2040,unitID=10604,rot="south",},
 	}
 	Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
 	--[[for i=1, #npc do
