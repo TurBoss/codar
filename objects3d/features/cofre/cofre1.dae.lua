@@ -1,8 +1,8 @@
 model = {
-   radius = 35,
+   radius = 43,
    --height = 100,
-   midpos = {0,30,0}, -- model center offset
-   tex1 = "prock.jpg", -- same as S3O texture 1
+   midpos = {0,18,0}, -- model center offset
+   tex1 = "cofre11.jpg", -- same as S3O texture 1
    --[[tex2 = "corraid2_512.dds", -- same as S3O texture 2
    invertteamcolor = true, -- invert tex1 alpha channel
    fliptextures = true, -- turn textures upside down
