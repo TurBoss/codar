@@ -61,15 +61,19 @@ function gadget:Initialize ()
 		gadgetHandler:RemoveGadget()
 		return
 	end
-	timer1 = SpawnTimer.create(500)
+	timer1 = SpawnTimer.create(9000) --timer dramon
 	timer2 = SpawnTimer.create(9000)
 	timer3 = SpawnTimer.create(9000)
 	timer4 = SpawnTimer.create(9000)
-	timer5 = SpawnTimer.create(500)
+	timerc5 = SpawnTimer.create(500) --timer cofre
+	timerc6 = SpawnTimer.create(500)
+	timerc7 = SpawnTimer.create(500)
 end
 
 function gadget:GameStart()
-	timer5:set_timer()
+	timerc5:set_timer()
+	timerc6:set_timer()
+	timerc7:set_timer()
 	spawnNPC(1)
 	spawnNPC(2)
 	spawnNPC(3)
@@ -88,8 +92,6 @@ function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerD
 		timer3:set_timer()
 	elseif unitID == 10603 then
 		timer4:set_timer()
-	elseif unitID == 10604 then
-		timer5:set_timer()
 	end
 end
 
@@ -98,15 +100,29 @@ function gadget:GameFrame(n)
 	if timer2:update(n) then spawnNPC(2) end
 	if timer3:update(n) then spawnNPC(3) end
 	if timer4:update(n) then spawnNPC(4) end
-	if timer5:update(n) then spawnFeature(1) end
+	if timerc5:update(n) then spawnFeature(1) end
+	if timerc6:update(n) then spawnFeature(2) end
+	if timerc7:update(n) then spawnFeature(3) end
 	checkFeatures(1)
+	checkFeatures(2)
+	checkFeatures(3)
 end
 
 --checkFeatures
 
 function checkFeatures(i)
-	if timer5:check() ~= true and Spring.ValidFeatureID(mineralID[i]) ~= true then
-		timer5:set_timer()
+	if i == 1 then
+		if timerc5:check() ~= true and Spring.ValidFeatureID(mineralID[i]) ~= true then
+			timerc5:set_timer()
+		end
+	elseif i == 2 then
+		if timerc6:check() ~= true and Spring.ValidFeatureID(mineralID[i]) ~= true then
+			timerc6:set_timer()
+		end
+	elseif i == 3 then
+		if timerc7:check() ~= true and Spring.ValidFeatureID(mineralID[i]) ~= true then
+			timerc7:set_timer()
+		end
 	end
 end
 
@@ -115,7 +131,9 @@ end
 function spawnFeature(i)
 	--Spring.Echo("torreloca")
 	feature = {
-		{name="cofre1",x=2070,z=2040,unitID=10604,rot="south",},
+		{name="cofre1",x=2070,z=2040,rot="south",},
+		{name="cofre2",x=450,z=450,rot="south",},
+		{name="cofre2",x=3600,z=3600,rot="south",},
 	}
 	
 		local yPlacement	= Spring.GetGroundHeight(feature[i].x,feature[i].z)+500
