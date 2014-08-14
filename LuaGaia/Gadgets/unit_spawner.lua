@@ -9,6 +9,7 @@ function gadget:GetInfo()
     enabled   = true,  --  loaded by default?
   }
 end
+mineralID = {}
 
 SpawnTimer = {}
 SpawnTimer.__index = SpawnTimer
@@ -26,7 +27,7 @@ function SpawnTimer.create(timeToSpawn)
 	setmetatable(tim,SpawnTimer)  -- make NpcTimer handle lookup
 	
 	--tim.npc = npc      -- initialize our object
-	tim.enabled = 0
+	tim.enabled = false
 	tim.spawnTime = timeToSpawn
 	tim.startTime = 0
 	return tim
@@ -35,15 +36,19 @@ end
 function SpawnTimer:set_timer()
 	--Spring.Echo("Timer " .. self.npc)
 	self.startTime, _ = Spring.GetGameFrame() 
-	self.enabled = 1
+	self.enabled = true
+end
+
+function SpawnTimer:check()
+	return self.enabled
 end
 
 function SpawnTimer:update(gameFrame)
 
 	local gameFrame = gameFrame
 
-	if gameFrame - self.startTime >= self.spawnTime and self.enabled == 1 then
-		self.enabled = 0
+	if gameFrame - self.startTime >= self.spawnTime and self.enabled then
+		self.enabled = false
 		return true
 	else
 		return false
@@ -94,19 +99,28 @@ function gadget:GameFrame(n)
 	if timer3:update(n) then spawnNPC(3) end
 	if timer4:update(n) then spawnNPC(4) end
 	if timer5:update(n) then spawnFeature(1) end
+	checkFeatures(1)
+end
+
+--checkFeatures
+
+function checkFeatures(i)
+	if timer5:check() ~= true and Spring.ValidFeatureID(mineralID[i]) ~= true then
+		timer5:set_timer()
+	end
 end
 
 --spawn features
 
 function spawnFeature(i)
-	Spring.Echo("torreloca")
+	--Spring.Echo("torreloca")
 	feature = {
 		{name="cofre1",x=2070,z=2040,unitID=10604,rot="south",},
 	}
 	
-		local yPlacement	= Spring.GetGroundHeight(feature[i].x,feature[i].z)+5
-		local mineralID = Spring.CreateFeature(feature[i].name, feature[i].x, yPlacement, feature[i].z, feature[i].rot)
-		Spring.Echo(mineralID)
+		local yPlacement	= Spring.GetGroundHeight(feature[i].x,feature[i].z)+500
+		mineralID[i] = Spring.CreateFeature(feature[i].name, feature[i].x, yPlacement, feature[i].z, feature[i].rot)
+		--Spring.Echo(mineralID[i])
 end
 
 
