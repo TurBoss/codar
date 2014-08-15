@@ -1,7 +1,7 @@
 function gadget:GetInfo()
   return {
-    name      = "Regards",
-    desc      = "Regard players by killing npcs",
+    name      = "Rewards",
+    desc      = "Reward players by killing npcs",
     author    = "TurBoss",
     date      = "16-07-14",
     license   = "GNU GPL v2 or later",
@@ -18,7 +18,7 @@ if (not gadgetHandler:IsSyncedCode()) then
 	return false
 end
 
-function gadget:Initialize ()	
+function gadget:Initialize ()
 	if Game.gameName ~= "Jauria RTS"	then
 		Spring.Echo ("PLAY WITH Jauria RTS!!")
 		gadgetHandler:RemoveGadget()
@@ -61,20 +61,20 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 							Spring.Echo("NK-3 Eliminado dando 160 de metal a " .. name)
 							Spring.AddTeamResource(attackerTeam, "m", 160)
 						elseif unitName == "tkt4" then
-							Spring.Echo("TKT-4 Eliminado dando 500 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 500)
+							Spring.Echo("TKT-4 Eliminado dando 550 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 550)
 						elseif unitName == "lz5" then
-							Spring.Echo("LZ-5 Eliminado dando 400 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 400)
+							Spring.Echo("LZ-5 Eliminado dando 700 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 700)
 						elseif unitName == "dt6" then
-							Spring.Echo("DT-6 Eliminado dando 800 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 800)
+							Spring.Echo("DT-6 Eliminado dando 1200 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 1200)
 						elseif unitName == "rc" then
-							Spring.Echo("RC Eliminado dando 150 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 150)
+							Spring.Echo("RC Eliminado dando 140 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 140)
 						elseif unitName == "it0" then
-							Spring.Echo("IT-0 Eliminado dando 75 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 75)
+							Spring.Echo("IT-0 Eliminado dando 180 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 180)
 						elseif unitName == "torreta" then
 							Spring.Echo("Torre Eliminada dando 1000 de metal a " .. name)
 							Spring.AddTeamResource(attackerTeam, "m", 1000)
