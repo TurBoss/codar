@@ -65,9 +65,9 @@ function gadget:Initialize ()
 	timer2 = SpawnTimer.create(9000)
 	timer3 = SpawnTimer.create(9000)
 	timer4 = SpawnTimer.create(9000)
-	timerc5 = SpawnTimer.create(500) --timer cofre
-	timerc6 = SpawnTimer.create(500)
-	timerc7 = SpawnTimer.create(500)
+	timerc5 = SpawnTimer.create(9000) --timer cofre
+	timerc6 = SpawnTimer.create(9000)
+	timerc7 = SpawnTimer.create(9000)
 end
 
 function gadget:GameStart()
