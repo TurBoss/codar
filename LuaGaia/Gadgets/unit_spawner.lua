@@ -147,8 +147,8 @@ end
 function spawnNPC(i)
 	--Spring.Echo("Spawn Npc " .. i)
 	npc = {
-		{x=2575,name="destructor",z=3211,unitID=10600,rot="south",},
-		{x=1561,name="destructor",z=903,unitID=10601,rot="north",},
+		{x=2575,name="gusano",z=3211,unitID=10600,rot="south",},
+		{x=1561,name="gusano",z=903,unitID=10601,rot="north",},
 		{x=3380,name="destructor",z=2030,unitID=10602,rot="west",},
 		{x=715,name="destructor",z=2030,unitID=10603,rot="east",},
 	}
