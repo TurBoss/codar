@@ -47,18 +47,10 @@ local features = {
 		
 		--Rocas Jungla
 		
-		{ name = 'prock_1'	,x = 1504	,z = 547	,rot = "0" },
-		{ name = 'prock_4'	,x = 1610	,z = 560	,rot = "0" },
-		{ name = 'prock_7'	,x = 1543	,z = 526	,rot = "0" },
-		{ name = 'prock_5'	,x = 1580	,z = 540	,rot = "0" },
-		{ name = 'prock_6'	,x = 1555	,z = 560	,rot = "0" },
+		{ name = 'prock_8'	,x = 1560	,z = 540	,rot = "-16382" },
 		
-		{ name = 'prock_1'	,x = 2612	,z = 3537	,rot = "0" },
-		{ name = 'prock_4'	,x = 2530	,z = 3536	,rot = "0" },
-		{ name = 'prock_7'	,x = 2597	,z = 3565	,rot = "0" },
-		{ name = 'prock_5'	,x = 2574	,z = 3540	,rot = "0" },
-		{ name = 'prock_6'	,x = 2551	,z = 3575	,rot = "0" },
-		
+		{ name = 'prock_8'	,x = 2570	,z = 3570	,rot = "-16382" },
+
 		--Rocas Caminos
 		
 		{ name = 'prock_2'	,x = 1966	,z = 3950	,rot = "0" },
