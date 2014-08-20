@@ -61,10 +61,10 @@ function gadget:Initialize ()
 		gadgetHandler:RemoveGadget()
 		return
 	end
-	timer1 = SpawnTimer.create(9000) --timer dramon
-	timer2 = SpawnTimer.create(9000)
-	timer3 = SpawnTimer.create(9000)
-	timer4 = SpawnTimer.create(9000)
+	timer1 = SpawnTimer.create(8000) --timer dramon
+	timer2 = SpawnTimer.create(8000)
+	timer3 = SpawnTimer.create(8000)
+	timer4 = SpawnTimer.create(8000)
 	timerc5 = SpawnTimer.create(9000) --timer cofre
 	timerc6 = SpawnTimer.create(9000)
 	timerc7 = SpawnTimer.create(9000)

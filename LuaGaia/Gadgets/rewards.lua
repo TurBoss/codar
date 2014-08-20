@@ -37,7 +37,7 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 	local name = nil
 	
 	if unitTeam == gaiaTeamID and unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
-		Spring.AddTeamResource(attackerTeam, "m", 550)
+		Spring.AddTeamResource(attackerTeam, "m", 500)
 	end
 	
 	if attackerTeam ~= nil then
@@ -52,32 +52,32 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 						end
 						
 						if unitName == "cnm1" then
-							Spring.Echo("NM-1 Eliminado dando 40 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 40)
+							Spring.Echo("NM-1 Eliminado dando 24 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 24)
 						elseif unitName == "drk2" then
-							Spring.Echo("RK-2 Eliminado dando 65 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 65)
+							Spring.Echo("RK-2 Eliminado dando 43 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 43)
 						elseif unitName == "enk3" then
-							Spring.Echo("NK-3 Eliminado dando 160 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 160)
+							Spring.Echo("NK-3 Eliminado dando 114 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 114)
 						elseif unitName == "ftkt4" then
-							Spring.Echo("TKT-4 Eliminado dando 550 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 550)
+							Spring.Echo("TKT-4 Eliminado dando 336 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 336)
 						elseif unitName == "glz5" then
-							Spring.Echo("LZ-5 Eliminado dando 700 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 700)
+							Spring.Echo("LZ-5 Eliminado dando 474 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 474)
 						elseif unitName == "hdt6" then
-							Spring.Echo("DT-6 Eliminado dando 1200 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 1200)
+							Spring.Echo("DT-6 Eliminado dando 825 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 825)
 						elseif unitName == "arc" then
-							Spring.Echo("RC Eliminado dando 140 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 140)
+							Spring.Echo("RC Eliminado dando 96 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 96)
 						elseif unitName == "bit0" then
-							Spring.Echo("IT-0 Eliminado dando 180 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 180)
+							Spring.Echo("IT-0 Eliminado dando 84 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 84)
 						elseif unitName == "torreta" then
-							Spring.Echo("Torre Eliminada dando 1000 de metal a " .. name)
-							Spring.AddTeamResource(attackerTeam, "m", 1000)
+							Spring.Echo("Torre Eliminada dando 700 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 700)
 						end
 					end
 				end
