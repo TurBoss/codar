@@ -27,10 +27,10 @@ function gadget:Initialize ()
 end
 
 function gadget:UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
-	regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
+	rewardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
 end
 
-function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
+function rewardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)
 	local unitName = UnitDefs[unitDefID].name
 	--Spring.Echo(unitName)
 	--Spring.Echo(Spring.GetPlayerInfo(0))
