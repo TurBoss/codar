@@ -78,6 +78,30 @@ function regardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 						elseif unitName == "torreta" then
 							Spring.Echo("Torre Eliminada dando 700 de metal a " .. name)
 							Spring.AddTeamResource(attackerTeam, "m", 700)
+							
+						--HEIKS--
+						
+						elseif unitName == "aheiker" then
+							Spring.Echo("Heiker Eliminado dando 90 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 90)
+						elseif unitName == "bheik" then
+							Spring.Echo("Heik Eliminado dando 20 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 20)
+						elseif unitName == "chaerik" then
+							Spring.Echo("Haerik Eliminado dando 108 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 108)
+						elseif unitName == "dhipso" then
+							Spring.Echo("Hipso Eliminado dando 112 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 112)
+						elseif unitName == "ehekor" then
+							Spring.Echo("Hekor Eliminado dando 290 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 290)
+						elseif unitName == "fhaek" then
+							Spring.Echo("Haek Eliminado dando 320 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 320)
+						elseif unitName == "gheibok" then
+							Spring.Echo("Heibok Eliminado dando 340 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 340)
 						end
 					end
 				end
