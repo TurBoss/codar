@@ -36,15 +36,15 @@ function rewardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 	--Spring.Echo(Spring.GetPlayerInfo(0))
 	local name = nil
 	
-	if unitTeam == gaiaTeamID and unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
-		Spring.AddTeamResource(attackerTeam, "m", 500)
-	end
+	--if unitTeam == gaiaTeamID and unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 then 
+	--	Spring.AddTeamResource(attackerTeam, "m", 500)
+	--end
 	
 	if attackerTeam ~= nil then
 		if attackerTeam ~= gaiaTeamID then
 			if unitTeam ~= gaiaTeamID then
 				if unitTeam ~= attackerTeam then
-					if attackerID ~= 10500 and attackerID ~= 10501 and attackerID ~= 10502 and attackerID ~= 10503 and attackerID ~= 10504 and attackerID ~= 10505 and attackerID ~= 10506 and attackerID ~= 10507 and attackerID ~= 10508 and attackerID ~= 10509 then
+					if attackerID ~= 10500 and attackerID ~= 10501 and attackerID ~= 10502 and attackerID ~= 10503 and attackerID ~= 10504 and attackerID ~= 10505 and attackerID ~= 10506 and attackerID ~= 10507 and attackerID ~= 10508 and attackerID ~= 10509 and attackerID ~= 10510 and attackerID ~= 10511 and attackerID ~= 10512 and attackerID ~= 10513 and attackerID ~= 10514 and attackerID ~= 10515 and attackerID ~= 10516 and attackerID ~= 10517 and attackerID ~= 10518 and attackerID ~= 10519 and attackerID ~= 10520 and attackerID ~= 10521 and attackerID ~= 10522 and attackerID ~= 10523 then
 						
 						local name,_,_,_,_,_,_,_,_ = Spring.GetPlayerInfo(attackerTeam)
 						if name == nil then
@@ -78,6 +78,9 @@ function rewardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 						elseif unitName == "torreta" then
 							Spring.Echo("Torre Eliminada dando 700 de metal a " .. name)
 							Spring.AddTeamResource(attackerTeam, "m", 700)
+						elseif unitName == "torretapro" then
+							Spring.Echo("Torre Pro Eliminada dando 1000 de metal a " .. name)
+							Spring.AddTeamResource(attackerTeam, "m", 1000)
 							
 						--HEIKS--
 						
