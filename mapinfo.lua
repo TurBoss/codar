@@ -4,11 +4,11 @@
 --
 
 local mapinfo = {
-	name        = "Chinollar",
-	shortname   = "XllR",
-	description = "Porretown Map",
+	name        = "Codar",
+	shortname   = "Codar",
+	description = "Jauria Map",
 	author      = "PerroTron",
-	version     = "0.6",
+	version     = "0.1",
 	--mutator   = "deployment";
 	--mapfile   = "", --// location of smf/sm3 file (optional)
 	modtype     = 3, --// 1=primary, 0=hidden, 3=map
