@@ -8,7 +8,7 @@ local mapinfo = {
 	shortname   = "Codar",
 	description = "Jauria Map",
 	author      = "PerroTron",
-	version     = "0.1",
+	version     = "0.2",
 	--mutator   = "deployment";
 	--mapfile   = "", --// location of smf/sm3 file (optional)
 	modtype     = 3, --// 1=primary, 0=hidden, 3=map
@@ -206,8 +206,8 @@ local mapinfo = {
 	},
 
 	teams = {
-		[0] = {startPos = {x = 200, z = 3686}},
-		[1] = {startPos = {x = 3870, z = 345}},
+		[0] = {startPos = {x = 330, z = 4632}},
+		[1] = {startPos = {x = 4800, z = 460}},
 		--[2] = {startPos = {x = 0, z = 0}},
 		--[3] = {startPos = {x = 0, z = 0}},
 	},

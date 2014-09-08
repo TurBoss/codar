@@ -6,125 +6,94 @@ local features = {
 	buildinglist = {
 	},
 	objectlist = {
-		{ name = 'ad0_pine_1_l'	,x = 2427	,z = 3247	,rot = "0" },
-		{ name = 'ad0_pine_2_l'	,x = 2445	,z = 3195	,rot = "0" },
-		{ name = 'ad0_pine_1_xl',x = 2501	,z = 3170	,rot = "0" },
-		{ name = 'ad0_pine_3_l'	,x = 2653	,z = 3187	,rot = "0" },
-		{ name = 'ad0_pine_2_l'	,x = 2705	,z = 3176	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 2735	,z = 3230	,rot = "0" },
-		{ name = 'ad0_pine_1_xl',x = 2363	,z = 3234	,rot = "0" },
-		{ name = 'ad0_pine_2_l'	,x = 2345	,z = 3173	,rot = "0" },
-		{ name = 'ad0_pine_3_l'	,x = 2801	,z = 3203	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 2783	,z = 3128	,rot = "0" },
-		{ name = 'ad0_pine_2_l'	,x = 2660	,z = 3060	,rot = "0" },
-		{ name = 'ad0_pine_1_xl',x = 2546	,z = 3113	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 2627	,z = 3074	,rot = "0" },
-		{ name = 'ad0_pine_2_l'	,x = 2473	,z = 3060	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1456	,z = 941	,rot = "0" },
-		{ name = 'ad0_pine_2_xl',x = 1351	,z = 954	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1500	,z = 938	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1649	,z = 947	,rot = "0" },
-		{ name = 'ad0_pine_2_l'	,x = 1729	,z = 900	,rot = "0" },
-		{ name = 'ad0_pine_3_xl',x = 1516	,z = 1090	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1370	,z = 733	,rot = "0" },
-		{ name = 'ad0_pine_2_l'	,x = 1297	,z = 786	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1716	,z = 780	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1700	,z = 664	,rot = "0" },
-		{ name = 'ad0_pine_2_xl',x = 1397	,z = 861	,rot = "0" },
-		{ name = 'ad0_pine_3_l'	,x = 1321	,z = 873	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 1676	,z = 850	,rot = "0" },
-		{ name = 'ad0_pine_2_l'	,x = 2723	,z = 3366	,rot = "0" },
-		{ name = 'ad0_pine_1_xl',x = 2442	,z = 3418	,rot = "0" },
-		{ name = 'ad0_pine_1_l'	,x = 2447	,z = 3335	,rot = "0" },
-		
-		--[[{ name = 'prock_1'	,x = 2000	,z = 2100	,rot = "0" },
-		{ name = 'prock_2'	,x = 2000	,z = 2200	,rot = "0" },
-		{ name = 'prock_3'	,x = 2000	,z = 2300	,rot = "0" },
-		{ name = 'prock_4'	,x = 2000	,z = 2400	,rot = "0" },
-		{ name = 'prock_5'	,x = 2000	,z = 2500	,rot = "0" },
-		{ name = 'prock_6'	,x = 2000	,z = 2600	,rot = "0" },
-		{ name = 'prock_7'	,x = 2000	,z = 2700	,rot = "0" },--]]
-		
+		--{ name = 'ad0_pine_1_l'	,x = 2427	,z = 3247	,rot = "0" },
+
 		--Rocas Jungla
 		
-		{ name = 'prock_8'	,x = 1560	,z = 540	,rot = "-16382" },
+		{ name = 'prock_8'	,x = 3090	,z = 4460	,rot = "-16382" },
+		{ name = 'prock_8'	,x = 3000	,z = 4460	,rot = "-16382" },
 		
-		{ name = 'prock_8'	,x = 2570	,z = 3570	,rot = "-16382" },
-
+		{ name = 'prock_8'	,x = 2020	,z = 670	,rot = "-16382" },
+		{ name = 'prock_8'	,x = 2110	,z = 670	,rot = "-16382" },
+		
 		--Rocas Caminos
 		
-		{ name = 'prock_2'	,x = 1966	,z = 3950	,rot = "0" },
-		{ name = 'prock_7'	,x = 1966	,z = 3895	,rot = "0" },
-		{ name = 'prock_6'	,x = 1966	,z = 3847	,rot = "0" },
+		{ name = 'prock_8'	,x = 2590	,z = 4470	,rot = "-16382" },
+		{ name = 'prock_8'	,x = 2700	,z = 4470	,rot = "-16382" },
 		
-		{ name = 'prock_2'	,x = 2162	,z = 150	,rot = "0" },
-		{ name = 'prock_7'	,x = 2162	,z = 200	,rot = "0" },
-		{ name = 'prock_6'	,x = 2162	,z = 250	,rot = "0" },
+		{ name = 'prock_8'	,x = 2430	,z = 630	,rot = "-16382" },
+		{ name = 'prock_8'	,x = 2550	,z = 630	,rot = "-16382" },
 		
-		{ name = 'prock_2'	,x = 1040	,z = 2367	,rot = "0" },
-		{ name = 'prock_6'	,x = 990	,z = 2367	,rot = "0" },
-		{ name = 'prock_1'	,x = 940	,z = 2367	,rot = "0" },
-		
-		{ name = 'prock_6'	,x = 3080	,z = 1770	,rot = "0" },
-		{ name = 'prock_2'	,x = 3130	,z = 1770	,rot = "0" },
-		{ name = 'prock_1'	,x = 3186	,z = 1770	,rot = "0" },
-		
-		--Metal top
-		
-		{ name = 'mineral1'	,x = 1950	,z = 710	,rot = "8000" },
-		{ name = 'mineral2'	,x = 2015	,z = 725	,rot = "-16382" },
-		{ name = 'mineral1'	,x = 2080	,z = 760	,rot = "32589" },
-		{ name = 'mineral1'	,x = 2120	,z = 720	,rot = "45" },
-		
-		{ name = 'mineral1'	,x = 1674	,z = 895	,rot = "32589" },
-		{ name = 'mineral2'	,x = 1406	,z = 772	,rot = "45" },
-		
-		{ name = 'mineral1'	,x = 3392	,z = 1917	,rot = "32589" },
-		{ name = 'mineral2'	,x = 3354	,z = 2140	,rot = "45" },
-		
-		{ name = 'mineral2'	,x = 3452	,z = 1212	,rot = "32589" },
-		{ name = 'mineral1'	,x = 3542	,z = 1174	,rot = "45" },
-		
-		{ name = 'mineral1'	,x = 2435	,z = 1620	,rot = "32589" },
-		{ name = 'mineral2'	,x = 3915	,z = 177	,rot = "45" },
-		{ name = 'mineral1'	,x = 3844	,z = 177	,rot = "45" },
-		
-		{ name = 'mineral1'	,x = 141	,z = 143	,rot = "32589" },
-		{ name = 'mineral2'	,x = 142	,z = 191	,rot = "45" },
-		{ name = 'mineral1'	,x = 196	,z = 146	,rot = "45" },
-		
-		{ name = 'mineral2'	,x = 1478	,z = 1700	,rot = "32589" },
-		{ name = 'mineral1'	,x = 1462	,z = 1800	,rot = "45" },
-		{ name = 'mineral2'	,x = 2905	,z = 655	,rot = "45" },
-		
-		--Metal bot
-		
-		{ name = 'mineral1'	,x = 1990	,z = 3390	,rot = "8000" },
-		{ name = 'mineral1'	,x = 2045	,z = 3380	,rot = "-16382" },
-		{ name = 'mineral2'	,x = 2112	,z = 3385	,rot = "32589" },
-		{ name = 'mineral1'	,x = 2180	,z = 3380	,rot = "45" },
-		
-		{ name = 'mineral1'	,x = 2470	,z = 3200	,rot = "32589" },
-		{ name = 'mineral2'	,x = 2712	,z = 3277	,rot = "45" },
-		
-		{ name = 'mineral1'	,x = 707	,z = 2155	,rot = "32589" },
-		{ name = 'mineral2'	,x = 715	,z = 1927	,rot = "45" },
-		
-		{ name = 'mineral2'	,x = 646	,z = 2895	,rot = "32589" },
-		{ name = 'mineral1'	,x = 553	,z = 2908	,rot = "45" },
+		{ name = 'prock_8'	,x = 610	,z = 2330	,rot = "32589" },
+		{ name = 'prock_8'	,x = 610	,z = 2430	,rot = "32589" },
 		
 		
-		{ name = 'mineral1'	,x = 1688	,z = 2479	,rot = "32589" },
-		{ name = 'mineral2'	,x = 177	,z = 3890	,rot = "45" },
-		{ name = 'mineral1'	,x = 266	,z = 3906	,rot = "45" },
+		{ name = 'prock_8'	,x = 4530	,z = 2700	,rot = "32589" },
+		{ name = 'prock_8'	,x = 4530	,z = 2770	,rot = "32589" },
+
 		
-		{ name = 'mineral1'	,x = 3938	,z = 3929	,rot = "32589" },
-		{ name = 'mineral2'	,x = 3936	,z = 3858	,rot = "45" },
-		{ name = 'mineral1'	,x = 3860	,z = 3931	,rot = "45" },
+		--Metal
 		
-		{ name = 'mineral2'	,x = 2627	,z = 2388	,rot = "32589" },
-		{ name = 'mineral1'	,x = 2641	,z = 2304	,rot = "45" },
-		{ name = 'mineral2'	,x = 1148	,z = 3445	,rot = "45" },
+		{ name = 'mineral1'	,x = 4020	,z = 115	,rot = "8000" },
+		{ name = 'mineral2'	,x = 3970	,z = 115	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 4070	,z = 115	,rot = "32589" },
+		
+		{ name = 'mineral2'	,x = 2490	,z = 115	,rot = "45" },
+		{ name = 'mineral1'	,x = 2440	,z = 115	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 2540	,z = 115	,rot = "32589" },
+		
+		{ name = 'mineral2'	,x = 1555	,z = 2105	,rot = "45" },
+		{ name = 'mineral1'	,x = 1605	,z = 2105	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 1505	,z = 2105	,rot = "32589" },
+		
+		{ name = 'mineral2'	,x = 2845	,z = 3375	,rot = "45" },
+		{ name = 'mineral1'	,x = 2845	,z = 3425	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 2845	,z = 3325	,rot = "32589" },
+		
+		{ name = 'mineral2'	,x = 2260	,z = 1740	,rot = "45" },
+		{ name = 'mineral1'	,x = 2260	,z = 1790	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 2260	,z = 1690	,rot = "32589" },
+
+		{ name = 'mineral1'	,x = 1105	,z = 4990	,rot = "8000" },
+		{ name = 'mineral1'	,x = 1155	,z = 4990	,rot = "-16382" },
+		{ name = 'mineral2'	,x = 1055	,z = 4990	,rot = "32589" },
+		
+		{ name = 'mineral1'	,x = 2635	,z = 4990	,rot = "8000" },
+		{ name = 'mineral2'	,x = 2685	,z = 4990	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 2585	,z = 4990	,rot = "32589" },
+		
+		{ name = 'mineral1'	,x = 3570	,z = 3000	,rot = "8000" },
+		{ name = 'mineral2'	,x = 3520	,z = 3000	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 3620	,z = 3000	,rot = "32589" },
+		
+		{ name = 'mineral1'	,x = 115	,z = 2080	,rot = "8000" },
+		{ name = 'mineral2'	,x = 115	,z = 2130	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 115	,z = 2030	,rot = "32589" },
+		
+		{ name = 'mineral1'	,x = 5005	,z = 3030	,rot = "8000" },
+		{ name = 'mineral2'	,x = 5005	,z = 3080	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 5005	,z = 3130	,rot = "32589" },
+		
+		{ name = 'mineral1'	,x = 915	,z = 2900	,rot = "8000" },
+		{ name = 'mineral2'	,x = 870	,z = 2860	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 950	,z = 2950	,rot = "32589" },
+		
+		{ name = 'mineral1'	,x = 4195	,z = 2200	,rot = "8000" },
+		{ name = 'mineral2'	,x = 4245	,z = 2245	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 4155	,z = 2155	,rot = "32589" },
+		
+		{ name = 'mineral1'	,x = 2405	,z = 4150	,rot = "8000" },
+		{ name = 'mineral2'	,x = 2455	,z = 4150	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 2355	,z = 4150	,rot = "32589" },
+		
+		{ name = 'mineral1'	,x = 2730	,z = 960	,rot = "8000" },
+		{ name = 'mineral2'	,x = 2780	,z = 960	,rot = "-16382" },
+		{ name = 'mineral1'	,x = 2680	,z = 960	,rot = "32589" },
+		
+		
+
+		
+
 	},
 	metalspots = {
 	},
