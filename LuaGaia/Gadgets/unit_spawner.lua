@@ -131,9 +131,9 @@ end
 function spawnFeature(i)
 	--Spring.Echo("torreloca")
 	feature = {
-		{name="cofre1",x=2070,z=2040,rot="south",},
-		{name="cofre2",x=450,z=450,rot="south",},
-		{name="cofre2",x=3600,z=3600,rot="south",},
+		{name="cofre1",x=2575,z=2550,rot="south",},
+		{name="cofre2",x=4551,z=4500,rot="south",},
+		{name="cofre2",x=605,z=605,rot="south",},
 	}
 	
 		local yPlacement	= Spring.GetGroundHeight(feature[i].x,feature[i].z)+500

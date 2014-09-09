@@ -91,8 +91,15 @@ local features = {
 		{ name = 'mineral1'	,x = 2680	,z = 960	,rot = "32589" },
 		
 		
-
+		{ name = 'mineral2'	,x = 283	,z = 142	,rot = "8000" },
+		{ name = 'mineral1'	,x = 182	,z = 134	,rot = "8000" },
+		{ name = 'mineral2'	,x = 143	,z = 188	,rot = "8000" },
+		{ name = 'mineral1'	,x = 148	,z = 293	,rot = "8000" },
 		
+		{ name = 'mineral2'	,x = 4981	,z = 4810	,rot = "8000" },
+		{ name = 'mineral1'	,x = 4980	,z = 4915	,rot = "8000" },
+		{ name = 'mineral2'	,x = 4875	,z = 4985	,rot = "8000" },
+		{ name = 'mineral1'	,x = 4814	,z = 4950	,rot = "8000" },
 
 	},
 	metalspots = {
