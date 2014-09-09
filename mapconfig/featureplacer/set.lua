@@ -10,26 +10,26 @@ local features = {
 
 		--Rocas Jungla
 		
-		{ name = 'prock_8'	,x = 3090	,z = 4460	,rot = "-16382" },
-		{ name = 'prock_8'	,x = 3000	,z = 4460	,rot = "-16382" },
+		--{ name = 'prock_8'	,x = 3090	,z = 4460	,rot = "-16382" },
+		--{ name = 'prock_8'	,x = 3000	,z = 4460	,rot = "-16382" },
 		
-		{ name = 'prock_8'	,x = 2020	,z = 670	,rot = "-16382" },
-		{ name = 'prock_8'	,x = 2110	,z = 670	,rot = "-16382" },
+		--{ name = 'prock_8'	,x = 2020	,z = 670	,rot = "-16382" },
+		--{ name = 'prock_8'	,x = 2110	,z = 670	,rot = "-16382" },
 		
 		--Rocas Caminos
 		
-		{ name = 'prock_8'	,x = 2590	,z = 4470	,rot = "-16382" },
-		{ name = 'prock_8'	,x = 2700	,z = 4470	,rot = "-16382" },
+		--{ name = 'prock_8'	,x = 2590	,z = 4470	,rot = "-16382" },
+		--{ name = 'prock_8'	,x = 2700	,z = 4470	,rot = "-16382" },
 		
-		{ name = 'prock_8'	,x = 2430	,z = 630	,rot = "-16382" },
-		{ name = 'prock_8'	,x = 2550	,z = 630	,rot = "-16382" },
+		--{ name = 'prock_8'	,x = 2430	,z = 630	,rot = "-16382" },
+		--{ name = 'prock_8'	,x = 2550	,z = 630	,rot = "-16382" },
 		
-		{ name = 'prock_8'	,x = 610	,z = 2330	,rot = "32589" },
-		{ name = 'prock_8'	,x = 610	,z = 2430	,rot = "32589" },
+		--{ name = 'prock_8'	,x = 610	,z = 2330	,rot = "32589" },
+		--{ name = 'prock_8'	,x = 610	,z = 2430	,rot = "32589" },
 		
 		
-		{ name = 'prock_8'	,x = 4530	,z = 2700	,rot = "32589" },
-		{ name = 'prock_8'	,x = 4530	,z = 2770	,rot = "32589" },
+		--{ name = 'prock_8'	,x = 4530	,z = 2700	,rot = "32589" },
+		--{ name = 'prock_8'	,x = 4530	,z = 2770	,rot = "32589" },
 
 		
 		--Metal
@@ -82,24 +82,24 @@ local features = {
 		{ name = 'mineral1'	,x = 4245	,z = 2245	,rot = "-16382" },
 		{ name = 'mineral1'	,x = 4155	,z = 2155	,rot = "32589" },
 		
-		{ name = 'mineral1'	,x = 2405	,z = 4150	,rot = "8000" },
-		{ name = 'mineral1'	,x = 2455	,z = 4150	,rot = "-16382" },
-		{ name = 'mineral1'	,x = 2355	,z = 4150	,rot = "32589" },
+		--{ name = 'mineral1'	,x = 2405	,z = 4150	,rot = "8000" },
+		--{ name = 'mineral1'	,x = 2455	,z = 4150	,rot = "-16382" },
+		--{ name = 'mineral1'	,x = 2355	,z = 4150	,rot = "32589" },
 		
-		{ name = 'mineral1'	,x = 2730	,z = 960	,rot = "8000" },
-		{ name = 'mineral1'	,x = 2780	,z = 960	,rot = "-16382" },
-		{ name = 'mineral1'	,x = 2680	,z = 960	,rot = "32589" },
+		--{ name = 'mineral1'	,x = 2730	,z = 960	,rot = "8000" },
+		--{ name = 'mineral1'	,x = 2780	,z = 960	,rot = "-16382" },
+		--{ name = 'mineral1'	,x = 2680	,z = 960	,rot = "32589" },
 		
 		
-		{ name = 'mineral2'	,x = 283	,z = 142	,rot = "8000" },
-		{ name = 'mineral1'	,x = 182	,z = 134	,rot = "8000" },
-		{ name = 'mineral2'	,x = 143	,z = 188	,rot = "8000" },
-		{ name = 'mineral1'	,x = 148	,z = 293	,rot = "8000" },
+		--{ name = 'mineral2'	,x = 283	,z = 142	,rot = "8000" },
+		--{ name = 'mineral1'	,x = 182	,z = 134	,rot = "8000" },
+		--{ name = 'mineral2'	,x = 143	,z = 188	,rot = "8000" },
+		--{ name = 'mineral1'	,x = 148	,z = 293	,rot = "8000" },
 		
-		{ name = 'mineral2'	,x = 4981	,z = 4810	,rot = "8000" },
-		{ name = 'mineral1'	,x = 4980	,z = 4915	,rot = "8000" },
-		{ name = 'mineral2'	,x = 4875	,z = 4985	,rot = "8000" },
-		{ name = 'mineral1'	,x = 4814	,z = 4950	,rot = "8000" },
+		--{ name = 'mineral2'	,x = 4981	,z = 4810	,rot = "8000" },
+		--{ name = 'mineral1'	,x = 4980	,z = 4915	,rot = "8000" },
+		--{ name = 'mineral2'	,x = 4875	,z = 4985	,rot = "8000" },
+		--{ name = 'mineral1'	,x = 4814	,z = 4950	,rot = "8000" },
 
 	},
 	metalspots = {
