@@ -8,7 +8,7 @@ local mapinfo = {
 	shortname   = "Codar",
 	description = "Jauria Map",
 	author      = "PerroTron",
-	version     = "0.2",
+	version     = "0.3",
 	--mutator   = "deployment";
 	--mapfile   = "", --// location of smf/sm3 file (optional)
 	modtype     = 3, --// 1=primary, 0=hidden, 3=map
