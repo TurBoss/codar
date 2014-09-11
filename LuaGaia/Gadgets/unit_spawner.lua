@@ -199,16 +199,17 @@ function spawnNPC(i)
 		{name="gusano",x=3260,z=4040,unitID=10600,rot="west",},
 		{name="gusano",x=1870,z=1060,unitID=10601,rot="east",},
 		
-		{name="destructor",x=4885,z=4885,unitID=10602,rot="west",},
-		{name="destructor",x=4220,z=3210,unitID=10603,rot="east",},
+		{name="escorpion",x=4885,z=4885,unitID=10602,rot="west",},
+		{name="escorpion",x=220,z=220,unitID=10605,rot="east",},
 		
-		{name="escorpion",x=920,z=1920,unitID=10604,rot="west",},
-		{name="destructor",x=220,z=220,unitID=10605,rot="east",},
-		{name="destructor",x=620,z=3950,unitID=10606,rot="west",},
-		{name="escorpion",x=2025,z=4130,unitID=10607,rot="south",},
-		{name="destructor",x=4500,z=1160,unitID=10608,rot="east",},
+		{name="cuellito",x=4490,z=1175,unitID=10608,rot="east",},
+		{name="cuellito",x=614,z=3950,unitID=10606,rot="west",},
+		
+		{name="destructor",x=4220,z=3210,unitID=10603,rot="east",},
 		{name="destructor",x=3080,z=985,unitID=10609,rot="north",},
 		{name="escorpion",x=2530,z=2530,unitID=10610,rot="east",},
+		{name="escorpion",x=2025,z=4130,unitID=10607,rot="south",},
+		{name="escorpion",x=920,z=1920,unitID=10604,rot="west",},
 	}
 	Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
 	--[[for i=1, #npc do
@@ -228,6 +229,9 @@ function spawnTurrets1()
 		--BOT--
 		{name="torreta",x=1810,z=4620,unitID=10504,rot="east",},
 		{name="torreta",x=3610,z=4620,unitID=10505,rot="east",},
+		
+		{name="torrun",x=930,z=2400,unitID=10506,rot="east",},
+		{name="torrun",x=2500,z=4067,unitID=10507,rot="north",},
 	}
 	for i=1, #npc do
 		Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, 0, false, true, npc[i].unitID)
@@ -238,14 +242,17 @@ function spawnTurrets2()
 	--Spring.Echo("Spawns Turrents 2")
 	npc = {
 		--BOT--
-		{name="torreta",x=3315,z=500,unitID=10506,rot="west",},
-		{name="torreta",x=1520,z=500,unitID=10507,rot="west",},
+		{name="torreta",x=3315,z=500,unitID=10508,rot="west",},
+		{name="torreta",x=1520,z=500,unitID=10509,rot="west",},
 		--MID--
-		{name="torreta",x=3935,z=1186,unitID=10508,rot="west",},
-		{name="torreta",x=3020,z=2105,unitID=10509,rot="west",},
+		{name="torreta",x=3935,z=1186,unitID=10510,rot="west",},
+		{name="torreta",x=3020,z=2105,unitID=10511,rot="west",},
 		--TOP--
-		{name="torreta",x=4628,z=1810,unitID=10510,rot="west",},
-		{name="torreta",x=4628,z=3610,unitID=10511,rot="west",},
+		{name="torreta",x=4628,z=1810,unitID=10512,rot="west",},
+		{name="torreta",x=4628,z=3610,unitID=10513,rot="west",},
+		
+		{name="torrun",x=4200,z=2700,unitID=10514,rot="west",},
+		{name="torrun",x=2630,z=1043,unitID=10515,rot="south",},
 	}
 	for i=1, #npc do
 		Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, 1, false, true, npc[i].unitID)

@@ -44,7 +44,7 @@ function rewardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 		if attackerTeam ~= gaiaTeamID then
 			if unitTeam ~= gaiaTeamID then
 				if unitTeam ~= attackerTeam then
-					if attackerID ~= 10500 and attackerID ~= 10501 and attackerID ~= 10502 and attackerID ~= 10503 and attackerID ~= 10504 and attackerID ~= 10505 and attackerID ~= 10506 and attackerID ~= 10507 and attackerID ~= 10508 and attackerID ~= 10509 and attackerID ~= 10510 and attackerID ~= 10511 and attackerID ~= 10512 and attackerID ~= 10513 and attackerID ~= 10514 and attackerID ~= 10515 and attackerID ~= 10516 and attackerID ~= 10517 and attackerID ~= 10518 and attackerID ~= 10519 and attackerID ~= 10520 and attackerID ~= 10521 and attackerID ~= 10522 and attackerID ~= 10523 then
+					if attackerID ~= 10500 and attackerID ~= 10501 and attackerID ~= 10502 and attackerID ~= 10503 and attackerID ~= 10504 and attackerID ~= 10505 and attackerID ~= 10506 and attackerID ~= 10507 and attackerID ~= 10508 and attackerID ~= 10509 and attackerID ~= 10510 and attackerID ~= 10511 and attackerID ~= 10512 and attackerID ~= 10513 and attackerID ~= 10514 and attackerID ~= 10515 and attackerID ~= 10516 and attackerID ~= 10517 and attackerID ~= 10518 and attackerID ~= 10519 and attackerID ~= 10520 and attackerID ~= 10521 and attackerID ~= 10522 and attackerID ~= 10523 and attackerID ~= 10524 and attackerID ~= 10525 and attackerID ~= 10526 and attackerID ~= 10527 and attackerID ~= 10528 and attackerID ~= 10529 and attackerID ~= 10530 then
 						
 						local name,_,_,_,_,_,_,_,_ = Spring.GetPlayerInfo(attackerTeam)
 						if name == nil then
