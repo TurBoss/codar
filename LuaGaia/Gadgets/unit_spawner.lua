@@ -181,8 +181,8 @@ function spawnFeature(i)
 	--Spring.Echo("torreloca")
 	feature = {
 		{name="cofre1",x=2575,z=2550,rot="south",},
-		{name="cofre2",x=4551,z=4500,rot="south",},
-		{name="cofre2",x=605,z=605,rot="south",},
+		{name="cofre2",x=3630,z=3630,rot="south",},
+		{name="cofre2",x=1470,z=1470,rot="south",},
 	}
 	
 		local yPlacement	= Spring.GetGroundHeight(feature[i].x,feature[i].z)+500
@@ -205,11 +205,14 @@ function spawnNPC(i)
 		{name="cuellito",x=4490,z=1175,unitID=10608,rot="east",},
 		{name="cuellito",x=614,z=3950,unitID=10606,rot="west",},
 		
-		{name="destructor",x=4220,z=3210,unitID=10603,rot="east",},
-		{name="destructor",x=3080,z=985,unitID=10609,rot="north",},
+		
+		{name="cuellito",x=3140,z=985,unitID=10609,rot="north",},
+		{name="cuellito",x=1992,z=4130,unitID=10607,rot="south",},
+		
+		{name="cuellito",x=920,z=1920,unitID=10604,rot="west",},
+		{name="cuellito",x=4220,z=3210,unitID=10603,rot="east",},
+		
 		{name="escorpion",x=2530,z=2530,unitID=10610,rot="east",},
-		{name="escorpion",x=2025,z=4130,unitID=10607,rot="south",},
-		{name="escorpion",x=920,z=1920,unitID=10604,rot="west",},
 	}
 	Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
 	--[[for i=1, #npc do

@@ -11,7 +11,7 @@ local featureDef	=	{
 	blocking			=true,
 	upright				=true,
 	hitdensity			= "5",
-	metal				=50,
+	metal				=20,
 
 	damage				=2000,
 	flammable			=true,

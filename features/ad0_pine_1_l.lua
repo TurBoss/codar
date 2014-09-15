@@ -12,11 +12,12 @@ local featureDef	=	{
 	upright				=true,
 	hitdensity				=0,
 	energy				=0,
+	metal				=20,
 
 	damage				=100,
 	flammable				=true,
 	reclaimable				=false,
-	autoreclaimable				=flase,
+	autoreclaimable				=false,
 	featurereclamate				="smudge01",
 	seqnamereclamate				="tree1reclamate",
 	customparams = { 
