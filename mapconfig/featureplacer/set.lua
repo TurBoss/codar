@@ -6,6 +6,7 @@ local features = {
 	buildinglist = {
 	},
 	objectlist = {
+		--{ name = 'central'	,x = 2000	,z = 2000	,rot = "0" },
 		{ name = 'mineral1'	,x = 3560	,z = 3048	,rot = "0" },
 		{ name = 'mineral1'	,x = 872	,z = 2856	,rot = "0" },
 		{ name = 'mineral1'	,x = 2440	,z = 120	,rot = "0" },
