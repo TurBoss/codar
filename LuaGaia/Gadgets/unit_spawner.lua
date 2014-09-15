@@ -81,15 +81,13 @@ function gadget:Initialize ()
 	timer10 = SpawnTimer.create(8000)
 	timer11 = SpawnTimer.create(8000)
 	
-	timerc5 = SpawnTimer.create(9000) --timer cofre
-	timerc6 = SpawnTimer.create(9000)
-	timerc7 = SpawnTimer.create(9000)
+	timerc5 = SpawnTimer.create(90) --timer cofre
+	timerc6 = SpawnTimer.create(90)
 end
 
 function gadget:GameStart()
-	--timerc5:set_timer()
+	timerc5:set_timer()
 	timerc6:set_timer()
-	timerc7:set_timer()
 	
 	spawnNPC(1)
 	spawnNPC(2)
@@ -150,11 +148,9 @@ function gadget:GameFrame(n)
 	
 	if timerc5:update(n) then spawnFeature(1) end
 	if timerc6:update(n) then spawnFeature(2) end
-	if timerc7:update(n) then spawnFeature(3) end
 	
 	checkFeatures(1)
 	checkFeatures(2)
-	checkFeatures(3)
 end
 
 --checkFeatures
@@ -180,7 +176,6 @@ end
 function spawnFeature(i)
 	--Spring.Echo("torreloca")
 	feature = {
-		{name="cofre1",x=2575,z=2550,rot="south",},
 		{name="cofre2",x=3630,z=3630,rot="south",},
 		{name="cofre2",x=1470,z=1470,rot="south",},
 	}
