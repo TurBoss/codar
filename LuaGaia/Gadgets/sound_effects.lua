@@ -23,6 +23,11 @@ if (gadgetHandler:IsSyncedCode()) then
 else
 	
 	function gadget:Initialize()
+	if Game.gameName ~= "Jauria RTS"	then
+		Spring.Echo ("PLAY WITH Jauria RTS!!")
+		gadgetHandler:RemoveGadget()
+		return
+	end
 		gadgetHandler:AddSyncAction("Muerte", soundEffects)
 	end
 	

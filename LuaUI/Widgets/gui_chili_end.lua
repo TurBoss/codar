@@ -21,6 +21,11 @@ local caption = ""
 local screenWidth,screenHeight = Spring.GetWindowGeometry()
 
 function widget:Initialize()
+	if Game.gameName ~= "Jauria RTS"	then
+		Spring.Echo ("PLAY WITH Jauria RTS!!")
+		gadgetHandler:RemoveGadget()
+		return
+	end
 	Spring.SendCommands('endgraph 0')
 	Chili = WG.Chili
 	Button = Chili.Button
@@ -83,7 +88,6 @@ function widget:Shutdown()
 end
 
 function widget:RecvLuaMsg(msg, playerID)
-	Spring.Echo(msg:sub(9))
 	if not speccing then
 		if (msg:sub(1,8) == 'gameover') then
 			local winner = msg:sub(9)
