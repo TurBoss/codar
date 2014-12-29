@@ -241,7 +241,7 @@ local mapinfo = {
 		},
 		clouds = {
 			speed = 0.1, -- multiplier for speed of scrolling with wind
-			color = {0.56, 0.42, 0.4}, -- diffuse color of the fog
+			color = {1, 1, 1}, -- diffuse color of the fog
 			-- all altitude values can be either absolute, in percent, or "auto"
 			height = "15%", -- opacity of fog above and at this altitude will be zero
 			bottom = 0, -- no fog below this altitude
