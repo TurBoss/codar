@@ -209,10 +209,7 @@ function spawnNPC(i)
 		
 		{name="escorpion",x=2530,z=2530,unitID=10610,rot="east",},
 	}
-	Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
-	--[[for i=1, #npc do
-		Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
-	end]]--
+	Spring.CreateUnit (npc[i].name, npc[i].x, 0, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
 end
 
 function spawnTurrets1()
@@ -232,7 +229,7 @@ function spawnTurrets1()
 		{name="torrun",x=2500,z=4067,unitID=10507,rot="north",},
 	}
 	for i=1, #npc do
-		Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, 0, false, true, npc[i].unitID)
+		Spring.CreateUnit (npc[i].name, npc[i].x, 0, npc[i].z, npc[i].rot, 0, false, true, npc[i].unitID)
 	end
 end
 
@@ -253,19 +250,6 @@ function spawnTurrets2()
 		{name="torrun",x=2630,z=1043,unitID=10515,rot="south",},
 	}
 	for i=1, #npc do
-		Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, 1, false, true, npc[i].unitID)
+		Spring.CreateUnit (npc[i].name, npc[i].x, 0, npc[i].z, npc[i].rot, 1, false, true, npc[i].unitID)
 	end
-end
-
-function unselectableTurrents()
-	Spring.SetUnitNoSelect(10500, true)
-	Spring.SetUnitNoSelect(10501, true)
-	Spring.SetUnitNoSelect(10502, true)
-	Spring.SetUnitNoSelect(10503, true)
-	Spring.SetUnitNoSelect(10504, true)
-	Spring.SetUnitNoSelect(10505, true)
-	Spring.SetUnitNoSelect(10506, true)
-	Spring.SetUnitNoSelect(10507, true)
-	Spring.SetUnitNoSelect(10508, true)
-	Spring.SetUnitNoSelect(10509, true)
 end

@@ -8,7 +8,7 @@ local mapinfo = {
 	shortname   = "Codar",
 	description = "Jauria Map",
 	author      = "PerroTron",
-	version     = "0.7",
+	version     = "0.9",
 	--mutator   = "deployment";
 	--mapfile   = "", --// location of smf/sm3 file (optional)
 	modtype     = 3, --// 1=primary, 0=hidden, 3=map
@@ -19,7 +19,7 @@ local mapinfo = {
 	--StartMusic = "", --// deprecated
 
 	maphardness     = 100,
-	notDeformable   = false,
+	notDeformable   = true,
 	gravity         = 130,
 	tidalStrength   = 0,
 	maxMetal        = 0.02,
@@ -29,8 +29,8 @@ local mapinfo = {
 
 
 	smf = {
-		minheight = 150,
-		maxheight = 0,
+		minheight = 0,
+		maxheight = 120,
 		--smtFileName0 = "",
 		--smtFileName1 = "",
 		--smtFileName.. = "",
@@ -238,6 +238,16 @@ local mapinfo = {
 			speed     = 50,
 			windscale = 1.2,
 			texture   = 'LuaGaia/effects/snowflake.png',
+		},
+		clouds = {
+			speed = 0.1, -- multiplier for speed of scrolling with wind
+			color = {0.56, 0.42, 0.4}, -- diffuse color of the fog
+			-- all altitude values can be either absolute, in percent, or "auto"
+			height = "15%", -- opacity of fog above and at this altitude will be zero
+			bottom = 0, -- no fog below this altitude
+			fade_alt = "5%", -- fog will linearly fade away between this and "height", should be between height and bottom
+			scale = 127, -- how large will the clouds be
+			opacity = 0.3, -- what it says
 		},
 	},
 }
