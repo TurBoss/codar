@@ -38,7 +38,7 @@ function SpawnTimer.create(timeToSpawn)
 end
 
 function SpawnTimer:set_timer()
-	--Spring.Echo("Timer " .. self.npc)
+	--Spring.Echo("Timer")
 	self.startTime, _ = Spring.GetGameFrame() 
 	self.enabled = true
 end
@@ -50,7 +50,10 @@ end
 function SpawnTimer:update(gameFrame)
 
 	local gameFrame = gameFrame
-
+	--if self.enabled then
+	--	Spring.Echo(gameFrame - self.startTime)
+	--end
+	
 	if gameFrame - self.startTime >= self.spawnTime and self.enabled then
 		self.enabled = false
 		return true
@@ -69,20 +72,20 @@ function gadget:Initialize ()
 		return
 	end
 	
-	timer1 = SpawnTimer.create(8000) --timer dramon
-	timer2 = SpawnTimer.create(8000)
-	timer3 = SpawnTimer.create(8000)
-	timer4 = SpawnTimer.create(8000)
-	timer5 = SpawnTimer.create(8000)
-	timer6 = SpawnTimer.create(8000)
-	timer7 = SpawnTimer.create(8000)
-	timer8 = SpawnTimer.create(8000)
-	timer9 = SpawnTimer.create(8000)
-	timer10 = SpawnTimer.create(8000)
-	timer11 = SpawnTimer.create(8000)
+	timer1 = SpawnTimer.create(8000)	--gusano --timer dramon
+	timer2 = SpawnTimer.create(8000)	--gusano
+	timer3 = SpawnTimer.create(5000)	--escorpion
+	timer4 = SpawnTimer.create(4000)	--cuellito
+	timer5 = SpawnTimer.create(4000)	--cuellito
+	timer6 = SpawnTimer.create(4000)	--cuellito
+	timer7 = SpawnTimer.create(5000)	--escorpion
+	timer8 = SpawnTimer.create(4000)	--cuellito
+	timer9 = SpawnTimer.create(4000)	--cuellito
+	timer10 = SpawnTimer.create(4000)	--cuellito
+	timer11 = SpawnTimer.create(5000)	--escorpion
 	
-	timerc5 = SpawnTimer.create(9000) --timer cofre
-	timerc6 = SpawnTimer.create(9000)
+	timerc5 = SpawnTimer.create(6000) --timer cofre
+	timerc6 = SpawnTimer.create(6000)
 end
 
 function gadget:GameStart()
@@ -195,21 +198,21 @@ function spawnNPC(i)
 		{name="gusano",x=1870,z=1060,unitID=10601,rot="east",},
 		
 		{name="escorpion",x=4885,z=4885,unitID=10602,rot="west",},
-		{name="escorpion",x=220,z=220,unitID=10605,rot="east",},
+		{name="escorpion",x=220,z=220,unitID=10603,rot="east",},
 		
-		{name="cuellito",x=4490,z=1175,unitID=10608,rot="east",},
-		{name="cuellito",x=614,z=3950,unitID=10606,rot="west",},
+		{name="cuellito",x=4490,z=1175,unitID=10604,rot="east",},
+		{name="cuellito",x=614,z=3950,unitID=10605,rot="west",},
 		
 		
-		{name="cuellito",x=3140,z=985,unitID=10609,rot="north",},
+		{name="cuellito",x=3140,z=985,unitID=10606,rot="north",},
 		{name="cuellito",x=1992,z=4130,unitID=10607,rot="south",},
 		
-		{name="cuellito",x=920,z=1920,unitID=10604,rot="west",},
-		{name="cuellito",x=4220,z=3210,unitID=10603,rot="east",},
+		{name="cuellito",x=920,z=1920,unitID=10608,rot="west",},
+		{name="cuellito",x=4220,z=3210,unitID=10609,rot="east",},
 		
 		{name="escorpion",x=2530,z=2530,unitID=10610,rot="east",},
 	}
-	Spring.CreateUnit (npc[i].name, npc[i].x, 0, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
+	Spring.CreateUnit (npc[i].name, npc[i].x, 100, npc[i].z, npc[i].rot, gaiaTeamID, false, true, npc[i].unitID)
 end
 
 function spawnTurrets1()
