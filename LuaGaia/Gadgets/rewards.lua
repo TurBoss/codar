@@ -36,8 +36,16 @@ function rewardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 	--Spring.Echo(Spring.GetPlayerInfo(0))
 	local name = nil
 	local isbegincontructed = {}
-	if unitTeam == gaiaTeamID and unitID == 10600 or unitID == 10601 or unitID == 10602 or unitID == 10603 or unitID == 10604 or unitID == 10605 or unitID == 10606 or unitID == 10607 or unitID == 10608 or unitID == 10609 or unitID == 10610 then 
-		Spring.AddTeamResource(attackerTeam, "m", 500)
+	if unitTeam == gaiaTeamID then
+		if unitID == 10600 or unitID == 10601 then --gusano
+			Spring.AddTeamResource(attackerTeam, "m", 1400)
+		end
+		if unitID == 10602 or unitID == 10603 or unitID == 10610 then --escorpion
+			Spring.AddTeamResource(attackerTeam, "m", 1800)
+		end
+		if unitID == 10605 or unitID == 10606 or unitID == 10607 or unitID == 10608 or unitID == 10609 or unitID == 10604 then --cuellito
+			Spring.AddTeamResource(attackerTeam, "m", 800)
+		end
 	end
 	
 	if attackerTeam ~= nil then

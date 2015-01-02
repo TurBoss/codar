@@ -72,20 +72,20 @@ function gadget:Initialize ()
 		return
 	end
 	
-	timer1 = SpawnTimer.create(8000) --timer dramon
-	timer2 = SpawnTimer.create(8000)
-	timer3 = SpawnTimer.create(8000)
-	timer4 = SpawnTimer.create(8000)
-	timer5 = SpawnTimer.create(8000)
-	timer6 = SpawnTimer.create(8000)
-	timer7 = SpawnTimer.create(8000)
-	timer8 = SpawnTimer.create(8000)
-	timer9 = SpawnTimer.create(8000)
-	timer10 = SpawnTimer.create(8000)
-	timer11 = SpawnTimer.create(8000)
+	timer1 = SpawnTimer.create(8000)	--gusano --timer dramon
+	timer2 = SpawnTimer.create(8000)	--gusano
+	timer3 = SpawnTimer.create(5000)	--escorpion
+	timer4 = SpawnTimer.create(4000)	--cuellito
+	timer5 = SpawnTimer.create(4000)	--cuellito
+	timer6 = SpawnTimer.create(4000)	--cuellito
+	timer7 = SpawnTimer.create(5000)	--escorpion
+	timer8 = SpawnTimer.create(4000)	--cuellito
+	timer9 = SpawnTimer.create(4000)	--cuellito
+	timer10 = SpawnTimer.create(4000)	--cuellito
+	timer11 = SpawnTimer.create(5000)	--escorpion
 	
-	timerc5 = SpawnTimer.create(9000) --timer cofre
-	timerc6 = SpawnTimer.create(9000)
+	timerc5 = SpawnTimer.create(6000) --timer cofre
+	timerc6 = SpawnTimer.create(6000)
 end
 
 function gadget:GameStart()
