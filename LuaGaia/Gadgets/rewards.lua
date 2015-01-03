@@ -38,10 +38,10 @@ function rewardTeam(unitID, unitDefID, unitTeam, attackerID, attackerDefID, atta
 	local isbegincontructed = {}
 	if unitTeam == gaiaTeamID then
 		if unitID == 10600 or unitID == 10601 then --gusano
-			Spring.AddTeamResource(attackerTeam, "m", 1400)
+			Spring.AddTeamResource(attackerTeam, "m", 1350)
 		end
 		if unitID == 10602 or unitID == 10603 or unitID == 10610 then --escorpion
-			Spring.AddTeamResource(attackerTeam, "m", 1800)
+			Spring.AddTeamResource(attackerTeam, "m", 1200)
 		end
 		if unitID == 10605 or unitID == 10606 or unitID == 10607 or unitID == 10608 or unitID == 10609 or unitID == 10604 then --cuellito
 			Spring.AddTeamResource(attackerTeam, "m", 800)
