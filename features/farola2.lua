@@ -1,19 +1,18 @@
-local objectname= "murofinca2" 
+local objectname= "farola2" 
 local featureDef	=	{
-	name			= "murofinca2",
+	name			= "farola2",
 	world				="All Worlds",
 	description				="central",
 	category				="buildings",
-	object				="features/edificios/murofinca2.dae",
+	object				="features/escenografia/farola2.dae",
 	collisionvolumeoffsets = "0 0 0",
 	collisionvolumescales = "8 8 8",
 	collisionvolumetype = "Box",
-	useFootPrintCollisionVolume = true,
-	footprintx				=2,
+	footprintx				=1,
 	footprintz				=1,
 	height				=30,
 	blocking				=true,
-	upright				=false,
+	upright				=true,
 	hitdensity				=50,
 	energy				=0,
 
@@ -23,8 +22,8 @@ local featureDef	=	{
 	indestructible			=true,
 	noselect=true,
 	autoreclaimable				=false,
-	featurereclamate				="smudge01",
-	seqnamereclamate				="tree1reclamate",
+	--featurereclamate				="smudge01",
+	--seqnamereclamate				="tree1reclamate",
 	customparams = { 
 		randomrotate		= "false", 
 	}, 
