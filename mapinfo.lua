@@ -29,8 +29,8 @@ local mapinfo = {
 
 
 	smf = {
-		minheight = 120,
-		maxheight = 0,
+		minheight = 0,
+		maxheight = 120,
 		smtFileName0 = "codar.smt",
 		--smtFileName1 = "",
 		--smtFileName.. = "",
