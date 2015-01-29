@@ -248,6 +248,7 @@ local mapinfo = {
 			fade_alt = "5%", -- fog will linearly fade away between this and "height", should be between height and bottom
 			scale = 127, -- how large will the clouds be
 			opacity = 0.3, -- what it says
+			clamp_to_map = true,
 		},
 	},
 }

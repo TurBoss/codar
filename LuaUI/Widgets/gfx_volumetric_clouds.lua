@@ -5,7 +5,7 @@
 function widget:GetInfo()
   return {
     name      = "Volumetric Clouds",
-    version   = 4,
+    version   = 6,
     desc      = "Fog/Dust clouds that scroll with wind along the map's surface. Requires GLSL, expensive even with.",
     author    = "Anarchid, consulted and optimized by jK",
     date      = "november 2014",
@@ -15,7 +15,7 @@ function widget:GetInfo()
   }
 end
 
-enabled = true
+local enabled = true
 
 
 --------------------------------------------------------------------------------
@@ -52,13 +52,17 @@ local cloudsHeight    = CloudDefs.height
 local cloudsBottom    = CloudDefs.bottom or gnd_min
 local cloudsColor     = CloudDefs.color
 local cloudsScale     = CloudDefs.scale
+local cloudsClamp     = CloudDefs.clamp_to_map or false
 local speed    		  = CloudDefs.speed
 local opacity    	  = CloudDefs.opacity or 0.3
+local sunPenetration  = CloudDefs.sun_penetration or (-40.0)
 local fade_alt    	  = CloudDefs.fade_alt
 local fr,fg,fb        = unpack(cloudsColor)
 local sunDir = {0,0,0}
 local sunCol = {1,0,0}
 
+assert(type(sunPenetration) == "number")
+assert(type(cloudsClamp) == "boolean")
 assert(type(cloudsHeight) == "number")
 assert(type(cloudsBottom) == "number")
 assert(type(fr) == "number")
@@ -137,27 +141,12 @@ local GL_DEPTH_COMPONENT24 = 0x81A6
 local GL_DEPTH_COMPONENT32 = 0x81A7
 local GL_RGBA32F_ARB       = 0x8814
 
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-local debugGfx  = false --or true
-
-local GLSLRenderer = true
-local forceNonGLSL = false -- force using the non-GLSL renderer
-local post83 = true
-
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
 if (gnd_min < 0) then gnd_min = 0 end
 if (gnd_max < 0) then gnd_max = 0 end
 local vsx, vsy
-local mx = Game.mapSizeX
-local mz = Game.mapSizeZ
-local fog
-local CurrentCameraY
-local timeNow, timeThen = 0,0
 
 local depthShader
 local depthTexture
@@ -166,11 +155,15 @@ local fogTexture
 local uniformEyePos
 local uniformViewPrjInv
 local uniformOffset
+local uniformSundir
 local uniformSunColor
+local uniformTime
 
 local offsetX = 0;
 local offsetY = 0;
 local offsetZ = 0;
+
+
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -206,6 +199,7 @@ function widget:ViewResize()
 		fbo = true,
 	});
 
+
 	if (depthTexture == nil) then
 		spEcho("Removing fog widget, bad depth texture")
 		widgetHandler:RemoveWidget();
@@ -227,24 +221,18 @@ local vertSrc = [[
   }
 ]]
 
-local fragSrc = VFS.LoadFile("LuaUI/Widgets/Shaders/fog_frag.glsl"); 
+local fragSrc = VFS.LoadFile("LuaUI/Widgets/Shaders/fog_frag.glsl");
 
-fragSrc = fragSrc:format(cloudsScale, cloudsHeight, cloudsBottom, cloudsColor[1], cloudsColor[2], cloudsColor[3], mx, mz, fade_alt, opacity);
+fragSrc = fragSrc:format(
+  cloudsScale, cloudsHeight, cloudsBottom, 
+  cloudsColor[1], cloudsColor[2], cloudsColor[3], 
+  Game.mapSizeX, Game.mapSizeZ, 
+  fade_alt, opacity, sunPenetration
+);
 
-if (post83) then
-  fragSrc = '#define USE_INVERSEMATRIX\n' .. fragSrc
+if(cloudsClamp) then
+  fragSrc = '#define CLAMP_TO_MAP\n' .. fragSrc
 end
-
-if (debugGfx) then
-  fragSrc = '#define DEBUG_GFX\n' .. fragSrc
-end
-
-
-
-local function fract(x)
-	return select(2, math.modf(x,1))
-end
-
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -254,67 +242,54 @@ end
 --------------------------------------------------------------------------------
 
 function widget:Initialize()
-	--[[
-	spEcho('Height: '..cloudsHeight);
-	spEcho('Color: '..fr..','..fg..','..fb);
-	spEcho('Scale: '..cloudsScale);
-	spEcho('Enabled: '..tostring(enabled));
-	]]
-	if (enabled) then
-		if ((not forceNonGLSL) and Spring.GetMiniMapDualScreen()~='left') then --FIXME dualscreen
-			if (not glCreateShader) then
-				spEcho("Shaders not found, reverting to non-GLSL widget")
-				GLSLRenderer = false
-			else
-				depthShader = glCreateShader({
-					vertex = vertSrc,
-					fragment = fragSrc,
-					uniformInt = {
-						tex0 = 0,
-						tex1 = 1,
-					},
-				});
-				
-				local sunx, suny, sunz = gl.GetSun('pos');
-				local sunr, sung, sunb = gl.GetSun('specular');
-				sunDir = {sunx, suny, sunz};
-				sunCol = {sunr, sung, sunb};
-				
-				spEcho(glGetShaderLog())
-				if (not depthShader) then	
-					spEcho("Bad shader, reverting to non-GLSL widget.")
-					GLSLRenderer = false
-				else
-					uniformEyePos       = glGetUniformLocation(depthShader, 'eyePos')
-					uniformViewPrjInv   = glGetUniformLocation(depthShader, 'viewProjectionInv')
-					uniformOffset       = glGetUniformLocation(depthShader, 'offset')
-					uniformSundir       = glGetUniformLocation(depthShader, 'sundir')
-					uniformSunColor     = glGetUniformLocation(depthShader, 'suncolor')
-				end
-			end
+	if (Spring.GetMiniMapDualScreen() == 'left') then --FIXME dualscreen
+		enabled = false
+	end
+
+	if (not glCreateShader) then
+		enabled = false
+	end
+
+	if enabled then
+		depthShader = glCreateShader({
+			vertex = vertSrc,
+			fragment = fragSrc,
+			uniformInt = {
+				tex0 = 0,
+				tex1 = 1,
+			},
+		});
+
+		spEcho(glGetShaderLog())
+		if (not depthShader) then
+			spEcho("Bad shader, reverting to non-GLSL widget.")
+			enabled = false
 		else
-			GLSLRenderer = false
+			uniformEyePos       = glGetUniformLocation(depthShader, 'eyePos')
+			uniformViewPrjInv   = glGetUniformLocation(depthShader, 'viewProjectionInv')
+			uniformOffset       = glGetUniformLocation(depthShader, 'offset')
+			uniformSundir       = glGetUniformLocation(depthShader, 'sundir')
+			uniformSunColor     = glGetUniformLocation(depthShader, 'suncolor')
+			uniformTime         = glGetUniformLocation(depthShader, 'time')
 		end
-		if (not GLSLRenderer) then
-			fog = glCreateList(DrawPlaneModel)
-		end
-	else
+	end
+
+	if not(enabled) then
 		widgetHandler:RemoveWidget();
+		return
 	end
 end
 
 
 function widget:Shutdown()
-  if (GLSLRenderer) then
-    glDeleteTexture(depthTexture)
-    if (glDeleteShader) then
-      glDeleteShader(depthShader)
-    end
-  end
+	glDeleteTexture(depthTexture)
+	glDeleteTexture(fogTexture)
+	if (glDeleteShader) then
+		glDeleteShader(depthShader)
+	end
+	glDeleteTexture(":l:LuaUI/Widgets/Images/rgbnoise.png");
 end
 
-
-local dl
 
 local function renderToTextureFunc()
 	-- render a full screen quad
@@ -341,6 +316,8 @@ local function DrawFogNew()
 	glUniform(uniformSundir, sunDir[1], sunDir[2], sunDir[3]);
 	glUniform(uniformSunColor, sunCol[1], sunCol[2], sunCol[3]);
 
+	glUniform(uniformTime, Spring.GetGameSeconds() * speed);
+
 	glUniformMatrix(uniformViewPrjInv,  "viewprojectioninverse")
 
 	-- TODO: completely reset the texture before applying shader
@@ -360,15 +337,16 @@ function widget:GameFrame()
 	offsetX = offsetX-dx*speed;
 	offsetY = offsetY-0.25-dy*0.25*speed;
 	offsetZ = offsetZ-dz*speed;
-	
-	local sunx, suny, sunz = gl.GetSun('pos');
-	local sunr, sung, sunb = gl.GetSun('specular');
-	sunDir = {sunx, suny, sunz};
-	sunCol = {sunr, sung, sunb};
+
+	sunDir = {gl.GetSun('pos')}
+	sunCol = {gl.GetSun('specular')}
 end
 
+widget:GameFrame()
+
+
 function widget:DrawScreenEffects()
-	glBlending(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
+	glBlending(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA) -- in theory not needed but sometimes evil widgets disable it w/o reenabling it
 	glTexture(fogTexture);
 	gl.TexRect(0,0,vsx,vsy,0,0,1,1);
 	glTexture(false);
